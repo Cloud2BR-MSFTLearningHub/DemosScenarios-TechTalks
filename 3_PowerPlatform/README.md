@@ -11,6 +11,8 @@ Last updated: 2026-01-29
 
 ----------
 
+> By connecting SharePoint lists into Dataverse, users can unlock richer automation in Power Automate and smarter experiences in Copilot Studio. Dataverse acts as a structured data layer (built on Azure SQL Database under the hood), so SharePoint data becomes easier to model, secure, and integrate across the Power Platform.
+
 <details>
 <summary><b>Table of Content </b> (Click to expand)</summary>
 
