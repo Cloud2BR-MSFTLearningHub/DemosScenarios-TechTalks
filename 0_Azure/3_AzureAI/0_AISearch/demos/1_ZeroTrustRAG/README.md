@@ -3,8 +3,7 @@
 Costa Rica
 
 [![GitHub](https://badgen.net/badge/icon/github?icon=github&label)](https://github.com) 
-[![GitHub](https://img.shields.io/badge/--181717?logo=github&logoColor=ffffff)](https://github.com/)
-[brown9804](https://github.com/brown9804)
+[![GitHub](https://img.shields.io/badge/--181717?logo=github&logoColor=ffffff)](https://github.com/) [Cloud2BR OSS - Learning Hub](https://github.com/Cloud2BR-MSFTLearningHub)
 
 Last updated: 2026-01-29
 
@@ -49,11 +48,11 @@ From [Microsoft Security](https://www.microsoft.com/en-us/security/business/zero
 
 > Network Interface & Network Security Groups: 
 
-![nic-nsg-detailed](https://github.com/brown9804/MicrosoftCloudEssentialsHub/blob/main/0_Azure/3_AzureAI/0_AISearch/demos/1_ZeroTrustRAG/docs/0_nic-nsg-detailed.png)
+![nic-nsg-detailed](https://github.com/Cloud2BR-MSFTLearningHub/DemosScenarios-TechTalks/blob/main/0_Azure/3_AzureAI/0_AISearch/demos/1_ZeroTrustRAG/docs/0_nic-nsg-detailed.png)
 
 > Zero trust: Initial Phase
 
-![zero-trust-phase0](https://github.com/brown9804/MicrosoftCloudEssentialsHub/blob/main/0_Azure/3_AzureAI/0_AISearch/demos/1_ZeroTrustRAG/docs/1_zero-trust-phase0.png) 
+![zero-trust-phase0](https://github.com/Cloud2BR-MSFTLearningHub/DemosScenarios-TechTalks/blob/main/0_Azure/3_AzureAI/0_AISearch/demos/1_ZeroTrustRAG/docs/1_zero-trust-phase0.png) 
 
 > Microsoft Enterprise RAG Solution Accelerator: 
 
@@ -68,7 +67,7 @@ From [Microsoft Security](https://www.microsoft.com/en-us/security/business/zero
 9. **Response Generation**: The orchestrator uses Azure OpenAI to generate a response based on the retrieved documents.
 10. **Response Delivery**: The response is sent back to the user through the same secure path.
 
-![Microsoft-RAG_Azure-Template](https://github.com/brown9804/MicrosoftCloudEssentialsHub/blob/main/0_Azure/3_AzureAI/0_AISearch/demos/1_ZeroTrustRAG/docs/2_Microsoft-RAG_Azure-Template.png) <br/> 
+![Microsoft-RAG_Azure-Template](https://github.com/Cloud2BR-MSFTLearningHub/DemosScenarios-TechTalks/blob/main/0_Azure/3_AzureAI/0_AISearch/demos/1_ZeroTrustRAG/docs/2_Microsoft-RAG_Azure-Template.png) <br/> 
 From [Zero Trust Architecture Deployment](https://github.com/Azure/GPT-RAG?tab=readme-ov-file#zero-trust-architecture-deployment)
 
 <!-- START BADGE -->

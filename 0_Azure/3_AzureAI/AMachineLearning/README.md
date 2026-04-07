@@ -3,16 +3,15 @@
 Costa Rica
 
 [![GitHub](https://badgen.net/badge/icon/github?icon=github&label)](https://github.com) 
-[![GitHub](https://img.shields.io/badge/--181717?logo=github&logoColor=ffffff)](https://github.com/)
-[brown9804](https://github.com/brown9804)
+[![GitHub](https://img.shields.io/badge/--181717?logo=github&logoColor=ffffff)](https://github.com/) [Cloud2BR OSS - Learning Hub](https://github.com/Cloud2BR-MSFTLearningHub)
 
 Last updated: 2026-01-29
 
 ----------
 
-<img width="709" alt="image" src="https://github.com/brown9804/MSCloudEssentials_LPath/assets/24630902/63f16cb5-b34b-4d07-ac32-12aba33cd287">
+<img width="709" alt="image" src="../../img/migrated-assets/ai-ml-overview-1.png">
 
-<img width="709" alt="image" src="https://github.com/brown9804/MSCloudEssentials_LPath/assets/24630902/2dd7d32d-4232-4709-8ab4-5e1d2f7b059f">
+<img width="709" alt="image" src="../../img/migrated-assets/ai-ml-overview-2.png">
 
 Key Features: 
 - Accelerates time to value.

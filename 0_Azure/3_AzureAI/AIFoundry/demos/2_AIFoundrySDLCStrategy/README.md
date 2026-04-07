@@ -2,8 +2,7 @@
 
 Costa Rica
 
-[![GitHub](https://img.shields.io/badge/--181717?logo=github&logoColor=ffffff)](https://github.com/)
-[brown9804](https://github.com/brown9804)
+[![GitHub](https://img.shields.io/badge/--181717?logo=github&logoColor=ffffff)](https://github.com/) [Cloud2BR OSS - Learning Hub](https://github.com/Cloud2BR-MSFTLearningHub)
 
 Last updated: 2026-01-29
 
@@ -13,7 +12,7 @@ Last updated: 2026-01-29
 `Project = focused, goal-driven AI development.`
 
 > [!NOTE]
-> If you require additional information on Cloud and the SDLC process, please visit this [repository](https://github.com/brown9804/CloudDevOps_LPath?tab=readme-ov-file#cloud-devops---learning-path). It contains content not only on SDLC but also on DevOps practices.
+> If you require additional information on Cloud, SDLC, and DevOps practices, please visit [this repository](../../../../../README.md).
 
 <details>
 <summary><b>List of References </b> (Click to expand)</summary>
@@ -150,7 +149,7 @@ graph TD
 
 ## Demo 
 
-> Please follow the general setup for both approaches. You will then notice a distinction between these approaches in the subsequent subsections. Click [here to access the template arch diagram](https://github.com/brown9804/MicrosoftCloudEssentialsHub/tree/main/0_Azure/3_AzureAI/AIFoundry/demos/2_AIFoundrySDLCStrategy/docs)
+> Please follow the general setup for both approaches. You will then notice a distinction between these approaches in the subsequent subsections. Click [here to access the template arch diagram](https://github.com/Cloud2BR-MSFTLearningHub/DemosScenarios-TechTalks/tree/main/0_Azure/3_AzureAI/AIFoundry/demos/2_AIFoundrySDLCStrategy/docs)
 
 <p style="text-align: center">
     <img width="750" alt="image" src="https://github.com/user-attachments/assets/5aad6eea-e355-4c82-ac34-4e45b8df7934">

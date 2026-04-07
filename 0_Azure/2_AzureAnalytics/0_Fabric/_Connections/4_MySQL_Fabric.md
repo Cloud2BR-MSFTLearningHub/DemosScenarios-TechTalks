@@ -2,8 +2,7 @@
 
 Costa Rica
 
-[![GitHub](https://img.shields.io/badge/--181717?logo=github&logoColor=ffffff)](https://github.com/)
-[brown9804](https://github.com/brown9804)
+[![GitHub](https://img.shields.io/badge/--181717?logo=github&logoColor=ffffff)](https://github.com/) [Cloud2BR OSS - Learning Hub](https://github.com/Cloud2BR-MSFTLearningHub)
 
 Last updated: 2026-01-29
 
@@ -23,7 +22,7 @@ Last updated: 2026-01-29
 
 | **Deployment Type**            | **Suggested Connection Method**                                                                 | **Security Considerations**                                                                 |
 |--------------------------------|--------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------|
-| On-Premises Deployment         | MySQL Database Connector in Dataflow Gen2 with On-Premises Data Gateway, [click to see more about Connecting Microsoft Fabric to On-Premises MySQL](https://github.com/brown9804/MicrosoftCloudEssentialsHub/blob/main/0_Azure/2_AzureAnalytics/0_Fabric/_Connections/4_OnPremMYSQL.md#connecting-microsoft-fabric-to-on-premises-mysql)                     | Secure connection using on-premises data gateway, supports Basic and Windows authentication. |
+| On-Premises Deployment         | MySQL Database Connector in Dataflow Gen2 with On-Premises Data Gateway, [click to see more about Connecting Microsoft Fabric to On-Premises MySQL](https://github.com/Cloud2BR-MSFTLearningHub/DemosScenarios-TechTalks/blob/main/0_Azure/2_AzureAnalytics/0_Fabric/_Connections/4_OnPremMYSQL.md#connecting-microsoft-fabric-to-on-premises-mysql)                     | Secure connection using on-premises data gateway, supports Basic and Windows authentication. |
 | Infrastructure as a Service (IaaS) | MySQL Database Connector in Dataflow Gen2 or Power Query                                  | Secure connection using cloud provider's security features, supports various authentication types. |
 | Platform as a Service (PaaS)   | Power Query                                                                                 | Managed service with built-in security features, supports organizational account authentication. |
 | Database as a Service (DBaaS)  | Power Query                                                                                 | Fully managed service with automated security updates, supports various authentication types. |

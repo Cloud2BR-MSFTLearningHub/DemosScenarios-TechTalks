@@ -2,8 +2,7 @@
 
 Costa Rica
 
-[![GitHub](https://img.shields.io/badge/--181717?logo=github&logoColor=ffffff)](https://github.com/)
-[brown9804](https://github.com/brown9804)
+[![GitHub](https://img.shields.io/badge/--181717?logo=github&logoColor=ffffff)](https://github.com/) [Cloud2BR OSS - Learning Hub](https://github.com/Cloud2BR-MSFTLearningHub)
 
 Last updated: 2026-01-29
 
@@ -604,7 +603,7 @@ SalesAfterDiscount = SUM(Sales[SalesAmount]) - (SUM(Sales[SalesAmount]) * 'Disco
 
 ## Optimization 
 
-> Click here to read more about [Power BI: Incremental Refresh](https://github.com/brown9804/MicrosoftCloudEssentialsHub/blob/main/0_Azure/2_AzureAnalytics/0_Fabric/demos/11_PBi_IncreRefresh.md), or [Strategies to Prevent Capacity Spikes - Overview](https://github.com/brown9804/MicrosoftCloudEssentialsHub/blob/main/0_Azure/2_AzureAnalytics/0_Fabric/demos/21_FabricPreventCapacitySpikes.md)
+> Click here to read more about [Power BI: Incremental Refresh](https://github.com/Cloud2BR-MSFTLearningHub/DemosScenarios-TechTalks/blob/main/0_Azure/2_AzureAnalytics/0_Fabric/demos/11_PBi_IncreRefresh.md), or [Strategies to Prevent Capacity Spikes - Overview](https://github.com/Cloud2BR-MSFTLearningHub/DemosScenarios-TechTalks/blob/main/0_Azure/2_AzureAnalytics/0_Fabric/demos/21_FabricPreventCapacitySpikes.md)
 
 | **Optimization Area** | **Technique** | **Details** |
 |---|---|---|
@@ -632,9 +631,9 @@ SalesAfterDiscount = SUM(Sales[SalesAmount]) - (SUM(Sales[SalesAmount]) * 'Disco
 
 For more information, please refer to the general guidance provided below:
 
-- [Fabric: Overview of Configuration Settings](https://github.com/brown9804/MicrosoftCloudEssentialsHub/blob/main/0_Azure/2_AzureAnalytics/0_Fabric/demos/19_FabricConfigs.md)
-- [Fabric Capacity Metrics + Monitoring Overview](https://github.com/brown9804/MicrosoftCloudEssentialsHub/blob/main/0_Azure/2_AzureAnalytics/0_Fabric/demos/20_FabricCapacityMetrics.md)
-- [Microsoft Fabric - Power Bi: How to Manage Accesss](https://github.com/brown9804/MicrosoftCloudEssentialsHub/blob/main/0_Azure/2_AzureAnalytics/0_Fabric/demos/14_PbiManageAccess.md)
+- [Fabric: Overview of Configuration Settings](https://github.com/Cloud2BR-MSFTLearningHub/DemosScenarios-TechTalks/blob/main/0_Azure/2_AzureAnalytics/0_Fabric/demos/19_FabricConfigs.md)
+- [Fabric Capacity Metrics + Monitoring Overview](https://github.com/Cloud2BR-MSFTLearningHub/DemosScenarios-TechTalks/blob/main/0_Azure/2_AzureAnalytics/0_Fabric/demos/20_FabricCapacityMetrics.md)
+- [Microsoft Fabric - Power Bi: How to Manage Accesss](https://github.com/Cloud2BR-MSFTLearningHub/DemosScenarios-TechTalks/blob/main/0_Azure/2_AzureAnalytics/0_Fabric/demos/14_PbiManageAccess.md)
 
 | **Power BI** | **Capacity/Tenant** | **Domains** | **Security Groups/M365 Groups** |
 |---|---|---|---|

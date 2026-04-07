@@ -3,8 +3,7 @@
 Costa Rica
 
 [![GitHub](https://badgen.net/badge/icon/github?icon=github&label)](https://github.com)
-[![GitHub](https://img.shields.io/badge/--181717?logo=github&logoColor=ffffff)](https://github.com/)
-[brown9804](https://github.com/brown9804)
+[![GitHub](https://img.shields.io/badge/--181717?logo=github&logoColor=ffffff)](https://github.com/) [Cloud2BR OSS - Learning Hub](https://github.com/Cloud2BR-MSFTLearningHub)
 
 Last updated: 2026-01-29
 
@@ -12,7 +11,7 @@ Last updated: 2026-01-29
 
 > This demo is about how to setup secure document searches within a designated network, ensuring that your data remains protected while leveraging the capabilities of Azure OpenAI. <br/>
 
-> You could use the `RAG pattern` to improve the search experience in your web application. For instance, when a `user queries the search system`, it can retrieve `relevant documents from Azure Storage Blob` Containers and use the `retrieved information to generate a more accurate and detailed search result`. [Click here for more information about RAG and AI Search](https://github.com/brown9804/MicrosoftCloudEssentialsHub/tree/main/0_Azure/3_AzureAI/0_AISearch/demos).
+> You could use the `RAG pattern` to improve the search experience in your web application. For instance, when a `user queries the search system`, it can retrieve `relevant documents from Azure Storage Blob` Containers and use the `retrieved information to generate a more accurate and detailed search result`. [Click here for more information about RAG and AI Search](https://github.com/Cloud2BR-MSFTLearningHub/DemosScenarios-TechTalks/tree/main/0_Azure/3_AzureAI/0_AISearch/demos).
 
 <details>
 <summary><b>List of References </b> (Click to expand)</summary>
@@ -44,7 +43,7 @@ Last updated: 2026-01-29
 
 <img width="550" alt="image" src="https://github.com/user-attachments/assets/088ede47-564f-496e-8476-ea272c945e66">
 
-Click here to see more about [Workflow in Zero Trust Architecture](https://github.com/brown9804/MicrosoftCloudEssentialsHub/tree/main/0_Azure/3_AzureAI/0_AISearch/demos/1_ZeroTrustRAG#workflow-in-zero-trust-architecture)
+Click here to see more about [Workflow in Zero Trust Architecture](https://github.com/Cloud2BR-MSFTLearningHub/DemosScenarios-TechTalks/tree/main/0_Azure/3_AzureAI/0_AISearch/demos/1_ZeroTrustRAG#workflow-in-zero-trust-architecture)
 
 <img width="550" alt="image" src="https://github.com/user-attachments/assets/682cc2c6-3136-4029-87fd-0570d55cb074">
 

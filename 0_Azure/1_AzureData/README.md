@@ -2,8 +2,7 @@
 
 Costa Rica
 
-[![GitHub](https://img.shields.io/badge/--181717?logo=github&logoColor=ffffff)](https://github.com/)
-[brown9804](https://github.com/brown9804)
+[![GitHub](https://img.shields.io/badge/--181717?logo=github&logoColor=ffffff)](https://github.com/) [Cloud2BR OSS - Learning Hub](https://github.com/Cloud2BR-MSFTLearningHub)
 
 Last updated: 2026-01-29
 
@@ -21,7 +20,7 @@ Last updated: 2026-01-29
 
 Azure Data Storage and Databases both persist data but are optimized for different purposes. Storage provides durable capacity while databases structure data for efficient access. Storage suits long-term file retention while databases enable interactive applications.
 
-<img width="700" alt="image" src="https://github.com/brown9804/MSCloudEssentials_LPath/assets/24630902/ab71485a-5434-401e-ae25-277957c2ffb7">
+<img width="700" alt="image" src="../img/migrated-assets/azure-data-overview.png">
 
 Image from [here](https://www.edureka.co/blog/azure-storage-tutorial/)
 

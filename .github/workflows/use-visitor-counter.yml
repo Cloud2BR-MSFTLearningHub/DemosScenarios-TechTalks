@@ -22,35 +22,16 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Shallow clone visitor counter logic
-        run: git clone --depth=1 https://github.com/brown9804/github-visitor-counter.git
-
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
           node-version: '20'
 
-      - name: Install dependencies for github-visitor-counter
-        run: |
-          cd github-visitor-counter
-          npm ci
-
       - name: Run visitor counter logic (updates markdown badges and metrics.json)
-        run: node github-visitor-counter/update_repo_views_counter.js
+        run: node .github/scripts/update_repo_views_counter.js
         env:
           TRAFFIC_TOKEN: ${{ secrets.TRAFFIC_TOKEN }}
           REPO: ${{ github.repository }}
-
-      - name: Move generated metrics.json to root
-        run: mv github-visitor-counter/metrics.json .
-
-      - name: List files for debugging
-        run: |
-          ls -l
-          ls -l github-visitor-counter
-
-      - name: Clean up visitor counter logic
-        run: rm -rf github-visitor-counter
 
       - name: Configure Git author
         run: |
