@@ -2,8 +2,7 @@
 
 Costa Rica
 
-[![GitHub](https://img.shields.io/badge/--181717?logo=github&logoColor=ffffff)](https://github.com/)
-[brown9804](https://github.com/brown9804)
+[![GitHub](https://img.shields.io/badge/--181717?logo=github&logoColor=ffffff)](https://github.com/) [Cloud2BR OSS - Learning Hub](https://github.com/Cloud2BR-MSFTLearningHub)
 
 Last updated: 2026-01-29
 
@@ -51,14 +50,14 @@ Last updated: 2026-01-29
 
 ## Overview 
 
-- [Free Trial Capacity](https://github.com/brown9804/MicrosoftCloudEssentialsHub/blob/main/0_Azure/2_AzureAnalytics/0_Fabric/demos/7_FreeTrialCapacity.md)
-- [Fabric capabilities based on SKU size](https://github.com/brown9804/MicrosoftCloudEssentialsHub/blob/main/0_Azure/2_AzureAnalytics/0_Fabric/demos/9_Fabric_bySKU)
-- [Fabric Capacity Reservations](https://github.com/brown9804/MicrosoftCloudEssentialsHub/blob/main/0_Azure/2_AzureAnalytics/0_Fabric/demos/12_FabricReservation.md)
-- [Fabric: Overview of Configuration Settings](https://github.com/brown9804/MicrosoftCloudEssentialsHub/blob/main/0_Azure/2_AzureAnalytics/0_Fabric/demos/19_FabricConfigs.md)
-- [Migration from Power BI Premium (P-SKUs) to Fabric (F-SKUs)](https://github.com/brown9804/MicrosoftCloudEssentialsHub/blob/main/0_Azure/2_AzureAnalytics/0_Fabric/demos/8_MigrationPtoFSku.md)
-- [Fabric Tenant Migration - Overview](https://github.com/brown9804/MicrosoftCloudEssentialsHub/blob/main/0_Azure/2_AzureAnalytics/0_Fabric/demos/24_FabricTenantMigration.md)
+- [Free Trial Capacity](https://github.com/Cloud2BR-MSFTLearningHub/DemosScenarios-TechTalks/blob/main/0_Azure/2_AzureAnalytics/0_Fabric/demos/7_FreeTrialCapacity.md)
+- [Fabric capabilities based on SKU size](https://github.com/Cloud2BR-MSFTLearningHub/DemosScenarios-TechTalks/blob/main/0_Azure/2_AzureAnalytics/0_Fabric/demos/9_Fabric_bySKU)
+- [Fabric Capacity Reservations](https://github.com/Cloud2BR-MSFTLearningHub/DemosScenarios-TechTalks/blob/main/0_Azure/2_AzureAnalytics/0_Fabric/demos/12_FabricReservation.md)
+- [Fabric: Overview of Configuration Settings](https://github.com/Cloud2BR-MSFTLearningHub/DemosScenarios-TechTalks/blob/main/0_Azure/2_AzureAnalytics/0_Fabric/demos/19_FabricConfigs.md)
+- [Migration from Power BI Premium (P-SKUs) to Fabric (F-SKUs)](https://github.com/Cloud2BR-MSFTLearningHub/DemosScenarios-TechTalks/blob/main/0_Azure/2_AzureAnalytics/0_Fabric/demos/8_MigrationPtoFSku.md)
+- [Fabric Tenant Migration - Overview](https://github.com/Cloud2BR-MSFTLearningHub/DemosScenarios-TechTalks/blob/main/0_Azure/2_AzureAnalytics/0_Fabric/demos/24_FabricTenantMigration.md)
 - [Fabric Princing Calculator](https://azure.microsoft.com/en-us/pricing/calculator/?msockid=38ec3806873362243e122ce086486339)
-- [Azure Support Plans - Overview](https://github.com/brown9804/MicrosoftCloudEssentialsHub/blob/main/0_Azure/7_AzureSupport/README.md)
+- [Azure Support Plans - Overview](https://github.com/Cloud2BR-MSFTLearningHub/DemosScenarios-TechTalks/blob/main/0_Azure/7_AzureSupport/README.md)
   
 ### Key Components
 
@@ -66,7 +65,7 @@ Last updated: 2026-01-29
 - **OneLake**: This is the unification of lakehouses.
 - **Real-Time hub**: This is the unification of data streams.
 
-<img width="709" alt="image" src="https://github.com/brown9804/MSCloudEssentials_LPath/assets/24630902/c2c78b3f-7d92-4cef-91b4-54c281c40fd9">
+<img width="709" alt="image" src="../../../img/migrated-assets/fabric-overview-1.png">
 
 | Component                | Purpose                                      | Key Features                                                                 | Why Fabric vs. Each Resource Individually                                  |
 |--------------------------|----------------------------------------------|------------------------------------------------------------------------------|---------------------------------------------------------------------------|
@@ -81,7 +80,7 @@ Last updated: 2026-01-29
 > Before Fabric
 
 <p float="left">
-  <img src="https://github.com/brown9804/MSCloudEssentials_LPath/assets/24630902/c47ad7c0-375e-4257-b56e-7b3b89619e2f" width="450" height="200" />
+  <img src="../../../img/migrated-assets/fabric-overview-2.png" width="450" height="200" />
   <img src="https://github.com/user-attachments/assets/1cbb0198-774c-498d-ab60-2f4c8e2a4218" width="350" height="190" />
 </p>
 
@@ -92,7 +91,7 @@ Last updated: 2026-01-29
 - **Unified Management and Governance**: Fabric seamlessly integrates data and services, enabling unified management, governance, and discovery.
 - **Security**: It ensures security for items, data, and row-level access.
 
-<img width="709" alt="image" src="https://github.com/brown9804/MSCloudEssentials_LPath/assets/24630902/f75bfae7-91af-4f4d-9ca7-8e9c625c4b93">
+<img width="709" alt="image" src="../../../img/migrated-assets/fabric-overview-3.png">
 
 
 ## OneLake in Microsoft Fabric
@@ -129,8 +128,8 @@ Last updated: 2026-01-29
 > OneLake allows storage of delta parquet files, which can be read and worked with throughout all workloads. It's a single, unified, logical data lake for the whole organization. Like OneDrive, OneLake comes automatically with every Microsoft Fabric tenant and is designed to be the single place for all your analytics data.
 
 <p float="left">
-  <img src="https://github.com/brown9804/MSCloudEssentials_LPath/assets/24630902/8566f641-277b-4746-826a-efc0bcd73d5a" width="450" height="300" />
-  <img src="https://github.com/brown9804/MSCloudEssentials_LPath/assets/24630902/54455481-fc87-40c2-b6ce-88895429257c" width="350" height="300" />
+  <img src="../../../img/migrated-assets/fabric-overview-4.png" width="450" height="300" />
+  <img src="../../../img/migrated-assets/fabric-overview-5.png" width="350" height="300" />
 </p>
 
 > `Parquet` is a `columnar storage file format` optimized for use with big data processing frameworks. `In Microsoft Fabric`, Parquet is commonly used for its efficiency in `storing and querying large datasets`. <br/>
@@ -204,7 +203,7 @@ graph TD
 
 ## Dataflow Gen2 & Data Pipelines
 
-<img width="709" alt="image" src="https://github.com/brown9804/MSCloudEssentials_LPath/assets/24630902/4d9d5e6d-ff9c-4f21-954e-61f644c750bd">
+<img width="709" alt="image" src="../../../img/migrated-assets/fabric-overview-6.png">
 
 | **Feature** | **Dataflow Gen2** | **Data Pipelines** |
 |-------------|-------------------|--------------------|
@@ -238,7 +237,7 @@ graph TD
 
 <img width="750" alt="image" src="https://github.com/user-attachments/assets/8a1623ef-3088-47c2-992c-552d25954cb9">
 
-Steps: Click [here to see a visual guidance](https://github.com/brown9804/MicrosoftCloudEssentialsHub/blob/main/0_Azure/2_AzureAnalytics/0_Fabric/demos/15_FabricMedallionArch/README.md#step-2-ingest-data-into-the-bronze-layer)
+Steps: Click [here to see a visual guidance](https://github.com/Cloud2BR-MSFTLearningHub/DemosScenarios-TechTalks/blob/main/0_Azure/2_AzureAnalytics/0_Fabric/demos/15_FabricMedallionArch/README.md#step-2-ingest-data-into-the-bronze-layer)
 1. Select **`Data pipeline`**.
 2. You can either click on **`Copy data assist`** right away or simply click on **`Copy data`**.
 
@@ -261,18 +260,18 @@ Steps: Click [here to see a visual guidance](https://github.com/brown9804/Micros
 
 ## Medallion Architecture Overview
 
-Click [here](https://github.com/brown9804/MicrosoftCloudEssentialsHub/blob/main/0_Azure/2_AzureAnalytics/0_Fabric/demos/15_FabricMedallionArch/README.md#fabric-medallion-architecture-overview) to go to a quick guide over the medallion architecture, and see a demo with conventional lakehouse.
+Click [here](https://github.com/Cloud2BR-MSFTLearningHub/DemosScenarios-TechTalks/blob/main/0_Azure/2_AzureAnalytics/0_Fabric/demos/15_FabricMedallionArch/README.md#fabric-medallion-architecture-overview) to go to a quick guide over the medallion architecture, and see a demo with conventional lakehouse.
 
   <img width="550" alt="image" src="https://github.com/user-attachments/assets/8cca8978-df21-493c-969e-78a6c7f84c94">
 
 ## Fabric: Highlights into AI/LLMs
 
-Click [here](https://github.com/brown9804/MicrosoftCloudEssentialsHub/blob/main/0_Azure/2_AzureAnalytics/0_Fabric/demos/13_FabricAI_LLMs#configure-azure-openai-service) to see a quick guide and demo.
+Click [here](https://github.com/Cloud2BR-MSFTLearningHub/DemosScenarios-TechTalks/blob/main/0_Azure/2_AzureAnalytics/0_Fabric/demos/13_FabricAI_LLMs#configure-azure-openai-service) to see a quick guide and demo.
 
-- Example of [how to integrate Azure OpenAI with Fabric](https://github.com/brown9804/MicrosoftCloudEssentialsHub/blob/main/0_Azure/2_AzureAnalytics/0_Fabric/demos/13_FabricAI_LLMs#configure-azure-openai-service): Call a deployed model and request information.
-- [Basic Usage of LangChain Transformer](https://github.com/brown9804/MicrosoftCloudEssentialsHub/blob/main/0_Azure/2_AzureAnalytics/0_Fabric/demos/13_FabricAI_LLMs#basic-usage-of-langchain-transformer): Create a prompt template, set up an LLMChain, and configure the transformer to execute the processing chain.
-- Example of [Using LangChain for Large Scale Literature Review](https://github.com/brown9804/MicrosoftCloudEssentialsHub/blob/main/0_Azure/2_AzureAnalytics/0_Fabric/demos/13_FabricAI_LLMs#using-langchain-for-large-scale-literature-review): This example is around extracting content from PDFs linked in arXiv papers and generating prompts for extracting specific information.
-- [Machine Learning Integration with Microsoft Fabric](https://github.com/brown9804/MicrosoftCloudEssentialsHub/blob/main/0_Azure/2_AzureAnalytics/0_Fabric/demos/13_FabricAI_LLMs#machine-learning-integration-with-microsoft-fabric): Shows how to train and register machine learning models using Microsoft Fabric's native integration with the MLflow framework. This includes logging trained models, hyperparameters, and evaluation metrics. It also shows how to compare and filter machine learning models using MLflow, with an example using RandomForestRegressor.
+- Example of [how to integrate Azure OpenAI with Fabric](https://github.com/Cloud2BR-MSFTLearningHub/DemosScenarios-TechTalks/blob/main/0_Azure/2_AzureAnalytics/0_Fabric/demos/13_FabricAI_LLMs#configure-azure-openai-service): Call a deployed model and request information.
+- [Basic Usage of LangChain Transformer](https://github.com/Cloud2BR-MSFTLearningHub/DemosScenarios-TechTalks/blob/main/0_Azure/2_AzureAnalytics/0_Fabric/demos/13_FabricAI_LLMs#basic-usage-of-langchain-transformer): Create a prompt template, set up an LLMChain, and configure the transformer to execute the processing chain.
+- Example of [Using LangChain for Large Scale Literature Review](https://github.com/Cloud2BR-MSFTLearningHub/DemosScenarios-TechTalks/blob/main/0_Azure/2_AzureAnalytics/0_Fabric/demos/13_FabricAI_LLMs#using-langchain-for-large-scale-literature-review): This example is around extracting content from PDFs linked in arXiv papers and generating prompts for extracting specific information.
+- [Machine Learning Integration with Microsoft Fabric](https://github.com/Cloud2BR-MSFTLearningHub/DemosScenarios-TechTalks/blob/main/0_Azure/2_AzureAnalytics/0_Fabric/demos/13_FabricAI_LLMs#machine-learning-integration-with-microsoft-fabric): Shows how to train and register machine learning models using Microsoft Fabric's native integration with the MLflow framework. This includes logging trained models, hyperparameters, and evaluation metrics. It also shows how to compare and filter machine learning models using MLflow, with an example using RandomForestRegressor.
 
 ## Writing SQL: SQL Analytics Endpoint
 
@@ -358,11 +357,11 @@ Click [here](https://github.com/brown9804/MicrosoftCloudEssentialsHub/blob/main/
 
 > Fabric AI Skills let you `build custom chat platforms for asking and answering questions using advanced AI`. By setting up these skills, we can ask questions and get reliable answers based on data. We need to give clear instructions and examples so the AI can work well for our company's specific needs and data.
 
-Click [here](https://github.com/brown9804/MicrosoftCloudEssentialsHub/blob/main/0_Azure/2_AzureAnalytics/0_Fabric/demos/2_FabricAISkills.md) for a quick guidance.
+Click [here](https://github.com/Cloud2BR-MSFTLearningHub/DemosScenarios-TechTalks/blob/main/0_Azure/2_AzureAnalytics/0_Fabric/demos/2_FabricAISkills.md) for a quick guidance.
 
 <!-- START BADGE -->
 <div align="center">
-  <img src="https://img.shields.io/badge/Total%20views-1535-limegreen" alt="Total views">
-  <p>Refresh Date: 2026-01-29</p>
+  <img src="https://img.shields.io/badge/Total%20views-1465-limegreen" alt="Total views">
+  <p>Refresh Date: 2026-04-07</p>
 </div>
 <!-- END BADGE -->

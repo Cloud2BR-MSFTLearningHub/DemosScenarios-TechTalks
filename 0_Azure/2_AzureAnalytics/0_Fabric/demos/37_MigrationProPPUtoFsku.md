@@ -2,8 +2,7 @@
 
 Costa Rica
 
-[![GitHub](https://img.shields.io/badge/--181717?logo=github&logoColor=ffffff)](https://github.com/)
-[brown9804](https://github.com/brown9804)
+[![GitHub](https://img.shields.io/badge/--181717?logo=github&logoColor=ffffff)](https://github.com/) [Cloud2BR OSS - Learning Hub](https://github.com/Cloud2BR-MSFTLearningHub)
 
 Last updated: 2026-01-29
 
@@ -85,7 +84,7 @@ https://github.com/user-attachments/assets/69891a7f-2777-44f7-853b-0afa74d5614e
 
 <!-- START BADGE -->
 <div align="center">
-  <img src="https://img.shields.io/badge/Total%20views-1535-limegreen" alt="Total views">
-  <p>Refresh Date: 2026-01-29</p>
+  <img src="https://img.shields.io/badge/Total%20views-1465-limegreen" alt="Total views">
+  <p>Refresh Date: 2026-04-07</p>
 </div>
 <!-- END BADGE -->

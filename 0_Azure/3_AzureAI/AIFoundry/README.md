@@ -2,8 +2,7 @@
 
 Costa Rica
 
-[![GitHub](https://img.shields.io/badge/--181717?logo=github&logoColor=ffffff)](https://github.com/)
-[brown9804](https://github.com/brown9804)
+[![GitHub](https://img.shields.io/badge/--181717?logo=github&logoColor=ffffff)](https://github.com/) [Cloud2BR OSS - Learning Hub](https://github.com/Cloud2BR-MSFTLearningHub)
 
 Last updated: 2026-01-29
 
@@ -75,7 +74,7 @@ Last updated: 2026-01-29
 - Built-in security and compliance investing USD20 billion in cybersecurity.
 - 8,500 security and threat intelligence experts compliance certification portfolios.
 
-  <img width="709" alt="image" src="https://github.com/brown9804/MSCloudEssentials_LPath/assets/24630902/ad165c2c-94ee-455d-8c90-55f56fb119b9"> 
+   <img width="709" alt="image" src="../../img/migrated-assets/ai-foundry-overview.png"> 
   
   [image from](https://www.slideshare.net/slideshow/azure-ai-platform-automated-ml-workshop/133115961)
 
@@ -413,7 +412,7 @@ Types of deployments available in Azure AI Studio:
 
 <!-- START BADGE -->
 <div align="center">
-  <img src="https://img.shields.io/badge/Total%20views-1535-limegreen" alt="Total views">
-  <p>Refresh Date: 2026-01-29</p>
+  <img src="https://img.shields.io/badge/Total%20views-1465-limegreen" alt="Total views">
+  <p>Refresh Date: 2026-04-07</p>
 </div>
 <!-- END BADGE -->

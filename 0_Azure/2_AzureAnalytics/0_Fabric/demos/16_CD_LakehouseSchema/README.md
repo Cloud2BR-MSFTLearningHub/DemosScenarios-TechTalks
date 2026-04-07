@@ -2,8 +2,7 @@
 
 Costa Rica
 
-[![GitHub](https://img.shields.io/badge/--181717?logo=github&logoColor=ffffff)](https://github.com/)
-[brown9804](https://github.com/brown9804)
+[![GitHub](https://img.shields.io/badge/--181717?logo=github&logoColor=ffffff)](https://github.com/) [Cloud2BR OSS - Learning Hub](https://github.com/Cloud2BR-MSFTLearningHub)
 
 Last updated: 2026-01-29
 
@@ -169,7 +168,7 @@ Process Overview:
 |---------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **Scheduled Refresh**     | Automatically refreshes data at specified intervals to keep it up-to-date. This allows you to automatically refresh the data at specified intervals, ensuring that the data in the new stage is always up-to-date.                                                                                                                                                          | - Can be configured to run multiple times a day.<br>- Ensures data in the new stage is always current.                                                                                                                             |
 | **On-Demand Refresh**     | Allows immediate data refresh, triggered manually or programmatically.                                                                                                                                                              | - Can be done through workspace list or lineage views.<br>- Can be triggered via a pipeline containing a dataflow activity.                                                                                                        |
-| **Incremental Refresh**   | Refreshes only the data that has changed since the last refresh, improving efficiency. Click [here to understand more about incremental refresh](https://github.com/brown9804/MicrosoftCloudEssentialsHub/blob/main/0_Azure/2_AzureAnalytics/0_Fabric/demos/11_PBi_IncreRefresh.md)                                                                                                                                       | - **Evaluate Changes**: Checks for changes in the data source based on a DateTime column.<br>- **Retrieve Data**: Only changed data is retrieved and loaded.<br>- **Replace Data**: Updated data is processed and replaced.       |
+| **Incremental Refresh**   | Refreshes only the data that has changed since the last refresh, improving efficiency. Click [here to understand more about incremental refresh](https://github.com/Cloud2BR-MSFTLearningHub/DemosScenarios-TechTalks/blob/main/0_Azure/2_AzureAnalytics/0_Fabric/demos/11_PBi_IncreRefresh.md)                                                                                                                                       | - **Evaluate Changes**: Checks for changes in the data source based on a DateTime column.<br>- **Retrieve Data**: Only changed data is retrieved and loaded.<br>- **Replace Data**: Updated data is processed and replaced.       |
 
 Steps to Set Up Incremental Refresh:
 1. **Create or Open a Dataflow**: Start by creating a new Dataflow Gen2 or opening an existing one.
@@ -179,7 +178,7 @@ Steps to Set Up Incremental Refresh:
 
 <!-- START BADGE -->
 <div align="center">
-  <img src="https://img.shields.io/badge/Total%20views-1535-limegreen" alt="Total views">
-  <p>Refresh Date: 2026-01-29</p>
+  <img src="https://img.shields.io/badge/Total%20views-1465-limegreen" alt="Total views">
+  <p>Refresh Date: 2026-04-07</p>
 </div>
 <!-- END BADGE -->

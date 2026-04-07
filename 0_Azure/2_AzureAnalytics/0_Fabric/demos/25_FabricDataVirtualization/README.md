@@ -3,8 +3,7 @@
 Costa Rica
 
 [![GitHub](https://badgen.net/badge/icon/github?icon=github&label)](https://github.com) 
-[![GitHub](https://img.shields.io/badge/--181717?logo=github&logoColor=ffffff)](https://github.com/)
-[brown9804](https://github.com/brown9804)
+[![GitHub](https://img.shields.io/badge/--181717?logo=github&logoColor=ffffff)](https://github.com/) [Cloud2BR OSS - Learning Hub](https://github.com/Cloud2BR-MSFTLearningHub)
 
 Last updated: 2026-01-29
 
@@ -164,7 +163,7 @@ Data Virtualization can be leveraged either through a dedicated tool or an integ
 
         <img width="550" alt="image" src="https://github.com/user-attachments/assets/199e60ee-03c5-4d6f-9fad-74724ffe20a3" />
 
-2. **Create a Data Warehouse and Lakehouse**: Click [here to see more information about these types of data architecture](https://github.com/brown9804/MicrosoftCloudEssentialsHub/blob/main/0_Azure/2_AzureAnalytics/0_Fabric/demos/17_Overview.md#lakehouse--data-warehouse)
+2. **Create a Data Warehouse and Lakehouse**: Click [here to see more information about these types of data architecture](https://github.com/Cloud2BR-MSFTLearningHub/DemosScenarios-TechTalks/blob/main/0_Azure/2_AzureAnalytics/0_Fabric/demos/17_Overview.md#lakehouse--data-warehouse)
    - In your workspace, select `New Item` > `Warehouse` to create a Data Warehouse `-> structured`.
 
      <img width="550" alt="image" src="https://github.com/user-attachments/assets/89e412f2-3c15-4de8-9272-ac7cc62cc938" />
@@ -225,7 +224,7 @@ graph LR
      <img width="550" alt="image" src="https://github.com/user-attachments/assets/d9bcd97c-5b54-4582-b4a7-5e1a5e13163f" />
 
 > [!IMPORTANT]
-> Use Shortcuts and Mirroring to enable real-time data integration. Click [here to see a quick guide](https://github.com/brown9804/MicrosoftCloudEssentialsHub/blob/main/0_Azure/2_AzureAnalytics/0_Fabric/demos/17_Overview.md#shortcuts--mirroring)
+> Use Shortcuts and Mirroring to enable real-time data integration. Click [here to see a quick guide](https://github.com/Cloud2BR-MSFTLearningHub/DemosScenarios-TechTalks/blob/main/0_Azure/2_AzureAnalytics/0_Fabric/demos/17_Overview.md#shortcuts--mirroring)
 
 > [!NOTE]
 > The ability to create shortcuts in Microsoft Fabric is available starting from the F64 SKU and higher. This feature allows you to create symbolic links to data stored in external storage systems like ADLS Gen 2, S3, or GCS, enabling in-place reads and writes without copying the data. Click [here for more information about it](https://learn.microsoft.com/en-us/fabric/enterprise/fabric-features). <br/>
@@ -312,7 +311,7 @@ graph LR
 
 <!-- START BADGE -->
 <div align="center">
-  <img src="https://img.shields.io/badge/Total%20views-1535-limegreen" alt="Total views">
-  <p>Refresh Date: 2026-01-29</p>
+  <img src="https://img.shields.io/badge/Total%20views-1465-limegreen" alt="Total views">
+  <p>Refresh Date: 2026-04-07</p>
 </div>
 <!-- END BADGE -->

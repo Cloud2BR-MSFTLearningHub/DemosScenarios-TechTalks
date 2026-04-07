@@ -2,8 +2,7 @@
 
 Costa Rica
 
-[![GitHub](https://img.shields.io/badge/--181717?logo=github&logoColor=ffffff)](https://github.com/)
-[brown9804](https://github.com/brown9804)
+[![GitHub](https://img.shields.io/badge/--181717?logo=github&logoColor=ffffff)](https://github.com/) [Cloud2BR OSS - Learning Hub](https://github.com/Cloud2BR-MSFTLearningHub)
 
 Last updated: 2026-01-29
 
@@ -44,7 +43,7 @@ Last updated: 2026-01-29
 7. Now you are able to create a report based on the semantic model created, you can ask copilot to create a draft report with the `Auto-create report` option.
 
 > [!NOTE]
-> Make sure to activate the setting under `Admin Portal -> Tenant Settings -> Copilot/Data -> Enabled`.  [Click here for more details](https://github.com/brown9804/MicrosoftCloudEssentialsHub/blob/main/0_Azure/2_AzureAnalytics/0_Fabric/demos/6_PBiCopilot.md#tenant-configuration)
+> Make sure to activate the setting under `Admin Portal -> Tenant Settings -> Copilot/Data -> Enabled`.  [Click here for more details](https://github.com/Cloud2BR-MSFTLearningHub/DemosScenarios-TechTalks/blob/main/0_Azure/2_AzureAnalytics/0_Fabric/demos/6_PBiCopilot.md#tenant-configuration)
 
   <img width="550" alt="image" src="https://github.com/user-attachments/assets/aa306dcc-0bbd-4fdb-bb5f-04ef79e9dfc8">
 
@@ -115,7 +114,7 @@ Last updated: 2026-01-29
 
 <!-- START BADGE -->
 <div align="center">
-  <img src="https://img.shields.io/badge/Total%20views-1535-limegreen" alt="Total views">
-  <p>Refresh Date: 2026-01-29</p>
+  <img src="https://img.shields.io/badge/Total%20views-1465-limegreen" alt="Total views">
+  <p>Refresh Date: 2026-04-07</p>
 </div>
 <!-- END BADGE -->

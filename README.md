@@ -2,8 +2,7 @@
 
 Costa Rica
 
-[![GitHub](https://img.shields.io/badge/--181717?logo=github&logoColor=ffffff)](https://github.com/)
-[brown9804](https://github.com/brown9804)
+[![GitHub](https://img.shields.io/badge/--181717?logo=github&logoColor=ffffff)](https://github.com/) [Cloud2BR OSS - Learning Hub](https://github.com/Cloud2BR-MSFTLearningHub)
 
 Last updated: 2026-01-29
 
@@ -41,7 +40,7 @@ Last updated: 2026-01-29
 </details>
 
 <div align="center">
-  <img width="200" alt="image" src="https://github.com/brown9804/MSCloudEssentials_LPath/assets/24630902/9bb7da30-96d0-4bf2-aa58-d53c46b20c90" style="border: 2px solid #4CAF50; border-radius: 5px; padding: 5px;"/>
+  <img width="200" alt="image" src="./0_Azure/img/migrated-assets/root-overview.png" style="border: 2px solid #4CAF50; border-radius: 5px; padding: 5px;"/>
 </div>
 
 > This repository contains the basic knowledge that I believe is required to work within Microsoft Cloud Technologies. The Microsoft Cloud ecosystem encompasses a range of products and solutions designed to work together to provide comprehensive cloud services. Here are the key components:
@@ -57,7 +56,7 @@ Last updated: 2026-01-29
 
 <!-- START BADGE -->
 <div align="center">
-  <img src="https://img.shields.io/badge/Total%20views-1535-limegreen" alt="Total views">
-  <p>Refresh Date: 2026-01-29</p>
+  <img src="https://img.shields.io/badge/Total%20views-1465-limegreen" alt="Total views">
+  <p>Refresh Date: 2026-04-07</p>
 </div>
 <!-- END BADGE -->

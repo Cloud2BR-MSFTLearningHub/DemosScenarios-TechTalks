@@ -2,8 +2,7 @@
 
 Costa Rica
 
-[![GitHub](https://img.shields.io/badge/--181717?logo=github&logoColor=ffffff)](https://github.com/)
-[brown9804](https://github.com/brown9804)
+[![GitHub](https://img.shields.io/badge/--181717?logo=github&logoColor=ffffff)](https://github.com/) [Cloud2BR OSS - Learning Hub](https://github.com/Cloud2BR-MSFTLearningHub)
 
 Last updated: 2026-01-29
 
@@ -75,7 +74,7 @@ Last updated: 2026-01-29
 
 > Microsoft Azure is a cloud computing platform that provides a wide range of services for building, deploying, and managing applications and infrastructure. It offers scalability, flexibility, and global reach.
 
-<img width="800" alt="image" src="https://github.com/brown9804/SDLC-Cloud_Lpath/assets/24630902/03e4b996-82bc-40c9-8374-d4267b59e8c3">
+<img width="800" alt="image" src="./img/migrated-assets/azure-overview-sdlc.png">
 
 ## Service Categories
 
@@ -94,7 +93,7 @@ Last updated: 2026-01-29
    - Examples: Office 365, Dynamics 365, Azure DevOps.
    - Use cases: Collaboration, productivity, customer relationship management (CRM).
 
-<img width="800" alt="image" src="https://github.com/brown9804/DevOps-Agile-Cloud_path/assets/24630902/7bc73a87-3b57-4f41-87de-5e72f3dfc6c7">
+<img width="800" alt="image" src="./img/migrated-assets/azure-overview-devops.png">
 
 ## Key Azure Products
 
@@ -126,12 +125,12 @@ Last updated: 2026-01-29
 
 ## Choose an Azure compute service
 
-<img width="800" alt="image" src="https://github.com/brown9804/MSCloudEssentials_LPath/assets/24630902/cf68fbc7-20e7-4e62-8202-393584f058e9">
+<img width="800" alt="image" src="./img/migrated-assets/azure-overview-cloud.png">
 
   
 <!-- START BADGE -->
 <div align="center">
-  <img src="https://img.shields.io/badge/Total%20views-1535-limegreen" alt="Total views">
-  <p>Refresh Date: 2026-01-29</p>
+  <img src="https://img.shields.io/badge/Total%20views-1465-limegreen" alt="Total views">
+  <p>Refresh Date: 2026-04-07</p>
 </div>
 <!-- END BADGE -->

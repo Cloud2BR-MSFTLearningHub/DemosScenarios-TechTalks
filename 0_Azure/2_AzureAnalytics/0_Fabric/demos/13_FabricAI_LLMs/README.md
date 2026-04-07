@@ -2,8 +2,7 @@
 
 Costa Rica
 
-[![GitHub](https://img.shields.io/badge/--181717?logo=github&logoColor=ffffff)](https://github.com/)
-[brown9804](https://github.com/brown9804)
+[![GitHub](https://img.shields.io/badge/--181717?logo=github&logoColor=ffffff)](https://github.com/) [Cloud2BR OSS - Learning Hub](https://github.com/Cloud2BR-MSFTLearningHub)
 
 Last updated: 2026-01-29
 
@@ -185,7 +184,7 @@ Last updated: 2026-01-29
 ### Configure Azure OpenAI Service
 
 > [!NOTE]
-> Click [here](https://github.com/brown9804/MicrosoftCloudEssentialsHub/blob/main/0_Azure/2_AzureAnalytics/0_Fabric/demos/13_FabricAI_LLMs/src/fabric-llms-overview_sample.ipynb) to see all notebook
+> Click [here](https://github.com/Cloud2BR-MSFTLearningHub/DemosScenarios-TechTalks/blob/main/0_Azure/2_AzureAnalytics/0_Fabric/demos/13_FabricAI_LLMs/src/fabric-llms-overview_sample.ipynb) to see all notebook
 
 1. **Set Up API Keys**: Ensure you have the API key and endpoint URL for your deployed model. Set these as environment variables
 
@@ -440,7 +439,7 @@ Make sure to replace `"your_openai_api_key"`, `"https://your_openai_api_base/"`,
 
 <!-- START BADGE -->
 <div align="center">
-  <img src="https://img.shields.io/badge/Total%20views-1535-limegreen" alt="Total views">
-  <p>Refresh Date: 2026-01-29</p>
+  <img src="https://img.shields.io/badge/Total%20views-1465-limegreen" alt="Total views">
+  <p>Refresh Date: 2026-04-07</p>
 </div>
 <!-- END BADGE -->

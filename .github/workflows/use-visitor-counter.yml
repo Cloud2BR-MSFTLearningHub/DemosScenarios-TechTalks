@@ -22,35 +22,16 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Shallow clone visitor counter logic
-        run: git clone --depth=1 https://github.com/brown9804/github-visitor-counter.git
-
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
           node-version: '20'
 
-      - name: Install dependencies for github-visitor-counter
-        run: |
-          cd github-visitor-counter
-          npm ci
-
       - name: Run visitor counter logic (updates markdown badges and metrics.json)
-        run: node github-visitor-counter/update_repo_views_counter.js
+        run: node .github/scripts/update_repo_views_counter.js
         env:
           TRAFFIC_TOKEN: ${{ secrets.TRAFFIC_TOKEN }}
           REPO: ${{ github.repository }}
-
-      - name: Move generated metrics.json to root
-        run: mv github-visitor-counter/metrics.json .
-
-      - name: List files for debugging
-        run: |
-          ls -l
-          ls -l github-visitor-counter
-
-      - name: Clean up visitor counter logic
-        run: rm -rf github-visitor-counter
 
       - name: Configure Git author
         run: |
@@ -63,13 +44,26 @@ jobs:
         env:
           TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          git fetch origin
-          git checkout ${{ github.head_ref }}
-          git pull origin ${{ github.head_ref }} || echo "No merge needed"
-          git add -A
-          git commit -m "Update visitor count" || echo "No changes to commit"
+          BRANCH="${{ github.head_ref }}"
           git remote set-url origin https://x-access-token:${TOKEN}@github.com/${{ github.repository }}
-          git push origin HEAD:${{ github.head_ref }}
+          HAS_CHANGES=false
+          if ! git diff --quiet || ! git diff --cached --quiet || [ -n "$(git ls-files --others --exclude-standard)" ]; then
+            HAS_CHANGES=true
+            git stash push --include-untracked --message visitor-counter
+          fi
+          git fetch origin "$BRANCH"
+          git checkout -B "$BRANCH" "origin/$BRANCH"
+          if [ "$HAS_CHANGES" = true ]; then
+            git stash pop
+          fi
+          git add -A
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+            exit 0
+          fi
+          git commit -m "Update visitor count"
+          git pull --rebase origin "$BRANCH"
+          git push origin HEAD:"$BRANCH"
 
       # Commit and push logic for non-PR events (merge, not rebase)
       - name: Commit and push changes (non-PR)
@@ -77,10 +71,23 @@ jobs:
         env:
           TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          git fetch origin
-          git checkout ${{ github.ref_name }} || git checkout -b ${{ github.ref_name }} origin/${{ github.ref_name }}
-          git pull origin ${{ github.ref_name }} || echo "No merge needed"
-          git add -A
-          git commit -m "Update visitor count" || echo "No changes to commit"
+          BRANCH="${{ github.ref_name }}"
           git remote set-url origin https://x-access-token:${TOKEN}@github.com/${{ github.repository }}
-          git push origin HEAD:${{ github.ref_name }}
+          HAS_CHANGES=false
+          if ! git diff --quiet || ! git diff --cached --quiet || [ -n "$(git ls-files --others --exclude-standard)" ]; then
+            HAS_CHANGES=true
+            git stash push --include-untracked --message visitor-counter
+          fi
+          git fetch origin "$BRANCH"
+          git checkout -B "$BRANCH" "origin/$BRANCH"
+          if [ "$HAS_CHANGES" = true ]; then
+            git stash pop
+          fi
+          git add -A
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+            exit 0
+          fi
+          git commit -m "Update visitor count"
+          git pull --rebase origin "$BRANCH"
+          git push origin HEAD:"$BRANCH"

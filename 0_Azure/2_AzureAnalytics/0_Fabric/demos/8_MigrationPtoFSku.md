@@ -2,8 +2,7 @@
 
 Costa Rica
 
-[![GitHub](https://img.shields.io/badge/--181717?logo=github&logoColor=ffffff)](https://github.com/)
-[brown9804](https://github.com/brown9804)
+[![GitHub](https://img.shields.io/badge/--181717?logo=github&logoColor=ffffff)](https://github.com/) [Cloud2BR OSS - Learning Hub](https://github.com/Cloud2BR-MSFTLearningHub)
 
 Last updated: 2026-01-29
 
@@ -117,7 +116,7 @@ https://github.com/user-attachments/assets/16fd8e90-22cc-48d3-8dce-e79e4ee9789b
       | Service                | Steps                                                                                       |
       |-----------------------|---------------------------------------------------------------------------------------------|
       | Pay-as-you-go | - Log in to the Azure portal.<br> - Navigate to the resource group where you want to create the Fabric capacity.<br> - Within the resource group, select the option to create a new resource.<br> - Search for and select the Fabric capacity option.<br> - Follow the prompts to configure and create the Fabric capacity. |
-      | Fabric Reservations   |      [Click here](https://github.com/brown9804/MicrosoftCloudEssentialsHub/blob/main/0_Azure/2_AzureAnalytics/0_Fabric/demos/12_FabricReservation.md) |
+      | Fabric Reservations   |      [Click here](https://github.com/Cloud2BR-MSFTLearningHub/DemosScenarios-TechTalks/blob/main/0_Azure/2_AzureAnalytics/0_Fabric/demos/12_FabricReservation.md) |
 
 4. **Migrate Workspaces**: `-> Compute`
     1. Access Power BI Admin Portal
@@ -248,7 +247,7 @@ https://github.com/user-attachments/assets/3fd19a65-1fd7-47ea-bc3c-a73314bb2d0b
      
 <!-- START BADGE -->
 <div align="center">
-  <img src="https://img.shields.io/badge/Total%20views-1535-limegreen" alt="Total views">
-  <p>Refresh Date: 2026-01-29</p>
+  <img src="https://img.shields.io/badge/Total%20views-1465-limegreen" alt="Total views">
+  <p>Refresh Date: 2026-04-07</p>
 </div>
 <!-- END BADGE -->
