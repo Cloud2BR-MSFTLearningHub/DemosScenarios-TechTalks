@@ -1,0 +1,22 @@
+// Costa Rica
+// July, 2021
+//                  
+//        Calculate the average per 
+// category using the measure in Power bi
+
+// Table name with '' 
+// Inside [] as header name 
+
+Average = 
+CALCULATE (
+    AVERAGE ( 'Table (2)'[Value] ),
+    FILTER ( ALLSELECTED ( 'Table (2)' ), 'Table (2)'[Category ] = MAX ( 'Table (2)'[Category ] ) )
+)
+
+
+AverageMeasure =
+CALCULATE ( AVERAGE ( 'Table (2)'[Value] ), ALLEXCEPT ( Table (2), 'Table (2)'[Category ]  ) )
+
+
+// References 
+// https://docs.microsoft.com/en-us/power-bi/create-reports/service-aggregates

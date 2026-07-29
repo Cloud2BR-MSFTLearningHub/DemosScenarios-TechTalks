@@ -1,0 +1,45 @@
+Resources
+| where type == "microsoft.web/sites"
+| mv-expand hostSsl = properties.hostNameSslStates
+| extend
+    publicNetworkAccess = tostring(properties.publicNetworkAccess),
+    clientCertRequired  = tostring(properties.clientCertEnabled),
+    privateEndpoints    = array_length(properties.privateEndpointConnections),
+    ipRestrictions      = array_length(properties.siteConfig.ipSecurityRestrictions),
+    hostName            = tostring(hostSsl.name),
+    thumbprint          = tostring(hostSsl.thumbprint)
+| extend
+    isLockedDown = (
+    publicNetworkAccess == "Disabled" or 
+    clientCertRequired == "Required" or
+    privateEndpoints > 0 or
+    ipRestrictions > 0
+    ),
+    isCustom = not(tolower(hostName) endswith ".azurewebsites.net")
+| join kind=leftouter (
+    Resources
+    | where type == "microsoft.web/certificates"
+    | extend
+        certThumb = tostring(properties.thumbprint),
+        canonical = tostring(properties.canonicalName)
+    | where canonical != "" 
+    | project certThumb, certName = name, certExpiry = properties.expirationDate, canonical
+    )
+    on $left.thumbprint == $right.certThumb
+| where 
+    isLockedDown 
+    or (isCustom and isnotempty(certThumb))
+| project
+    siteName             = name,
+    resourceGroup,
+    publicNetworkAccess,
+    clientCertRequired,
+    privateEndpoints,
+    ipRestrictions,
+    hostName,
+    thumbprint,
+    isManagedCert        = iff(isnotempty(certThumb), "Yes", "No"),
+    certName,
+    canonical,
+    certExpiry
+| order by resourceGroup asc, siteName asc

@@ -1,0 +1,19 @@
+# Fabric known issues - Overview 
+
+Costa Rica
+
+[![GitHub](https://img.shields.io/badge/--181717?logo=github&logoColor=ffffff)](https://github.com/) [Cloud2BR OSS - Learning Hub](https://github.com/Cloud2BR-MSFTLearningHub)
+
+Last updated: 2026-01-29
+
+----------
+
+> [!IMPORTANT]
+> Please monitor the [official documentation for Fabric known issues](https://learn.microsoft.com/en-us/fabric/get-started/fabric-known-issues).
+
+<!-- START BADGE -->
+<div align="center">
+  <img src="https://img.shields.io/badge/Total%20views-1465-limegreen" alt="Total views">
+  <p>Refresh Date: 2026-04-07</p>
+</div>
+<!-- END BADGE -->

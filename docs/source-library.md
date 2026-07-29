@@ -2,6 +2,8 @@
 
 This index provides complete coverage of the repository's **207 Markdown guides**. Each source-domain link opens the original detailed demos, scenarios, and tech-talk material maintained in the repository.
 
+Every original guide is also rendered in this site under the [hosted source library](source/README.md), preserving its original directory structure.
+
 | Source domain | Guides | Detailed source |
 | --- | ---: | --- |
 | Repository overview | 1 | [Demos, scenarios, and tech talks](https://github.com/Cloud2BR-MSFTLearningHub/DemosScenarios-TechTalks/blob/main/README.md) |
