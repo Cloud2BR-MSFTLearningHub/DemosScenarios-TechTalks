@@ -1,0 +1,69 @@
+site_name: Microsoft Cloud Demos, Scenarios, and Tech Talks
+site_description: Learning hub for Microsoft Cloud demonstration scenarios across Azure, Microsoft 365, Dynamics 365, and Power Platform.
+site_url: https://cloud2br-msftlearninghub.github.io/DemosScenarios-TechTalks/
+repo_url: https://github.com/Cloud2BR-MSFTLearningHub/DemosScenarios-TechTalks
+repo_name: Cloud2BR-MSFTLearningHub/DemosScenarios-TechTalks
+docs_dir: docs
+site_dir: site
+use_directory_urls: true
+copyright: Copyright &copy; 2026 <a href="https://github.com/Cloud2BR-MSFTLearningHub" target="_blank" rel="noopener">Cloud2BR OSS - Learning Hub</a>
+
+theme:
+  name: material
+  logo: https://avatars.githubusercontent.com/u/195347873?v=4
+  favicon: https://avatars.githubusercontent.com/u/195347873?v=4
+  features:
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - search.highlight
+    - content.code.copy
+  palette:
+    scheme: default
+    primary: blue
+    accent: blue
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - tables
+  - pymdownx.highlight
+  - pymdownx.snippets:
+      base_path:
+        - .
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_div_format
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - toc:
+      permalink: true
+
+extra_css:
+  - assets/css/custom.css
+extra_javascript:
+  - assets/js/logo-link.js
+  - assets/js/external-links.js
+  - path: assets/js/mermaid.js
+    type: module
+extra:
+  generator: false
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/Cloud2BR-MSFTLearningHub
+      name: Cloud2BR OSS - Learning Hub
+
+nav:
+  - Home: index.md
+  - Azure:
+      - Foundations and data: azure-foundations-and-data.md
+      - Analytics and Fabric: analytics-and-fabric.md
+      - AI and machine learning: azure-ai-and-machine-learning.md
+      - Operations, protection, and apps: azure-operations-and-apps.md
+  - Microsoft cloud business apps:
+      - Microsoft 365 and Dynamics 365: microsoft-365-and-dynamics.md
+      - Power Platform and Copilot Studio: power-platform-and-copilot.md
+  - Source library: source-library.md
