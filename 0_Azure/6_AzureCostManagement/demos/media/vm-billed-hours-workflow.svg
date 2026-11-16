@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="560" viewBox="0 0 1200 560" role="img" aria-labelledby="title description">
+  <title id="title">From detailed VM usage to billed hours and minutes</title>
+  <desc id="description">Use all partitions from one completed export or a detailed billing file. Filter the VM, date, usage rows, and underlying compute meter. Verify an hour unit and keep meters, pricing models, and currencies separate. Sum quantities before formatting. The illustrative quantities 1.50 and 0.25 hours total 1.75 hours, or 105 minutes, displayed as 1:45. This is not a start or stop timeline.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#2563eb"/></marker>
+    <style>
+      text { font-family: Segoe UI, Arial, sans-serif; fill: #172554; }
+      .heading { font-size: 30px; font-weight: 700; }
+      .label { font-size: 22px; font-weight: 600; }
+      .body { font-size: 19px; }
+      .box { fill: #eff6ff; stroke: #2563eb; stroke-width: 2; rx: 12; }
+      .link { fill: none; stroke: #2563eb; stroke-width: 3; marker-end: url(#arrow); }
+    </style>
+  </defs>
+  <rect width="1200" height="560" fill="#fff"/>
+  <text x="40" y="52" class="heading">Detailed VM usage to billed hours and minutes</text>
+  <text x="40" y="86" class="body">Illustrative workflow - keep the original decimal quantity for reconciliation.</text>
+  <rect x="40" y="120" width="340" height="145" class="box"/>
+  <text x="60" y="154" class="label">Detailed cost and usage file</text>
+  <text x="60" y="188" class="body">Billing file or completed export</text>
+  <text x="60" y="218" class="body">All partitions from the same run</text>
+  <text x="60" y="248" class="body">Do not append overlapping runs</text>
+  <path d="M385 192 H420" class="link"/>
+  <rect x="430" y="120" width="340" height="145" class="box"/>
+  <text x="450" y="154" class="label">Filter the relevant records</text>
+  <text x="450" y="188" class="body">Exact VM ResourceId and date</text>
+  <text x="450" y="218" class="body">Usage charge rows</text>
+  <text x="450" y="248" class="body">Underlying VM compute meter</text>
+  <path d="M775 192 H810" class="link"/>
+  <rect x="820" y="120" width="340" height="145" class="box"/>
+  <text x="840" y="154" class="label">Check units and grouping</text>
+  <text x="840" y="188" class="body">Verify UnitOfMeasure: hours</text>
+  <text x="840" y="218" class="body">Separate meter and pricing model</text>
+  <text x="840" y="248" class="body">Keep VM and currency separate</text>
+  <path d="M990 270 V298 H210 V320" class="link"/>
+  <rect x="40" y="330" width="340" height="135" class="box"/>
+  <text x="60" y="365" class="label">Sum Quantity by day</text>
+  <text x="60" y="401" class="body">1.50 + 0.25 = 1.75 billed hours</text>
+  <text x="60" y="435" class="body">Sum eligible rows, not their cost</text>
+  <path d="M385 397 H420" class="link"/>
+  <rect x="430" y="330" width="340" height="135" class="box"/>
+  <text x="450" y="365" class="label">Convert for display</text>
+  <text x="450" y="401" class="body">1.75 x 60 = 105 minutes</text>
+  <text x="450" y="435" class="body">Round only the display value</text>
+  <path d="M775 397 H810" class="link"/>
+  <rect x="820" y="330" width="340" height="135" class="box"/>
+  <text x="840" y="365" class="label">Format as [h]:mm</text>
+  <text x="840" y="401" class="body">105 minutes displays as 1:45</text>
+  <text x="840" y="435" class="body">Not an exact VM start/stop timeline</text>
+  <rect x="40" y="493" width="1120" height="43" rx="8" fill="#fff7ed" stroke="#c2410c"/>
+  <text x="60" y="521" class="body">Do not infer runtime from cost or add software, disk, non-hour, or unrelated meter quantities.</text>
+</svg>
