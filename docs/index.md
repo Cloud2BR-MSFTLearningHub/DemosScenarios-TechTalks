@@ -32,3 +32,4 @@ flowchart TB
 ## Complete source coverage
 
 The original repository contains **209 Markdown guides**. The [Source library](source-library.md) accounts for every guide through its source-domain indexes, including 138 detailed Azure Analytics and Azure AI documents.
+Last updated: 2026-11-16
