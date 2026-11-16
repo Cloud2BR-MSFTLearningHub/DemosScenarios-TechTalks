@@ -21,10 +21,13 @@ Use **Cost analysis** to see how VM costs change by day. For the **billed comput
 
 - [Before You Start](#before-you-start)
 - [View Daily VM Cost in the Portal](#view-daily-vm-cost-in-the-portal)
+- [Download Detailed Cost and Usage](#download-detailed-cost-and-usage)
 - [Get Billed Hours and Minutes by Day](#get-billed-hours-and-minutes-by-day)
+- [Worked Example](#worked-example)
 - [REST API: Query Daily Costs](#rest-api-query-daily-costs)
 - [REST API: Get Detailed Usage](#rest-api-get-detailed-usage)
 - [Understand the Result](#understand-the-result)
+- [Troubleshooting](#troubleshooting)
 - [References](#references)
 
 </details>
@@ -48,17 +51,53 @@ Use **Cost analysis** to see how VM costs change by day. For the **billed comput
 
 *Public example from [Monitor costs for virtual machines](https://learn.microsoft.com/en-us/azure/virtual-machines/cost-optimization-monitor-costs#monitor-costs); it does not show your subscription. The portal layout and available filters may vary.*
 
+## Download Detailed Cost and Usage
+
+Choose the billing scope that includes the VM and use one of the following options. Availability and permissions depend on your agreement.
+
+### Option A: Download a billing-period file
+
+1. In the Azure portal, search for **Cost Management + Billing** and select the appropriate billing account or profile.
+2. Follow the path for your agreement:
+   - **Microsoft Customer Agreement (MCA):** Select **Billing > Invoices**, find the invoice, select its ellipsis, and choose **Prepare Azure usage file**. When preparation finishes, download it from the notification or invoice details.
+   - **Enterprise Agreement (EA):** Select **Usage + charges**, choose **Download** for the month, select the applicable actual charges under **Usage Details**, and choose **Prepare document** followed by **Download csv**.
+   - **Pay-as-you-go / MOSP:** Select **Billing > Invoices**, find the billing period, select the download icon or ellipsis, and download **Usage Details**.
+3. Store the downloaded file in an approved location. A billing account file can cover multiple subscriptions, so filter by the VM's resource ID and subscription before analyzing it. See [View and download Azure usage and charges](https://learn.microsoft.com/en-us/azure/cost-management-billing/understand/download-azure-daily-usage) for agreement-specific roles and current screens.
+
+### Option B: Export detailed usage to storage
+
+1. Search for **Cost Management**, select the scope containing the VM, and choose **Exports > + Create**.
+2. On **Basics**, select a suitable template or **Create your own export**. On **Datasets**, add or edit an export with **Cost and usage details (actual)**, choose its dataset version and frequency, and specify the required dates. This is different from the FOCUS dataset.
+3. On **Destination**, select an approved storage account, container and directory. Choose **CSV** and a supported compression option. Review the settings and select **Review + create**. Creating a scheduled export and storing data can have operational or storage costs; follow your organization's approval and access policies.
+4. Open the export and inspect **Run history**. Use **Run now** if needed, or **Export selected dates** for supported historical periods. Wait for a successful run, then download every file belonging to that run from the configured storage destination. Exports can take time to appear.
+5. A daily export can contain month-to-date data, not just one day. Analyze a single complete snapshot for the period rather than appending overlapping runs and counting the same charges twice.
+
+![Public Microsoft Learn example of the Cost Management export dataset configuration](https://learn.microsoft.com/en-us/azure/cost-management-billing/costs/media/tutorial-improved-exports/add-export.png)
+
+*Public example from [Create and manage Cost Management exports](https://learn.microsoft.com/en-us/azure/cost-management-billing/costs/tutorial-improved-exports); it does not show your subscription.*
+
 ## Get Billed Hours and Minutes by Day
 
-1. Download detailed **actual cost and usage** for the period through the billing portal, or create a **Cost and usage details (Actual)** export in **Cost Management > Exports** to an approved storage account. Exports can be partitioned, so include all parts of one completed run. Select the non-FOCUS actual-cost dataset for the column names below. See [download usage and charges](https://learn.microsoft.com/en-us/azure/cost-management-billing/understand/download-azure-daily-usage) and [create exports](https://learn.microsoft.com/en-us/azure/cost-management-billing/costs/tutorial-improved-exports).
-2. Open the file securely in Excel or Power Query. Confirm its date range and inspect its headers; column names vary with agreement and file version.
+1. Obtain the actual cost and usage file using one of the options above. For an export, use all partitions from one completed run, not overlapping snapshots.
+2. In Excel, choose **Data > From Text/CSV**, select the file, and use **Transform Data** to inspect and filter it in Power Query. For multiple partitions, combine the files from the same run. Confirm the date range and headers; column names vary with agreement and file version.
 3. Filter **ResourceId** (or **InstanceId** in some older files) to the exact VM, **Date** to the days of interest, and **ChargeType** to usage where available. Inspect **MeterCategory**, **MeterSubCategory**, **MeterName**, **MeterId**, and **AdditionalInfo** to identify the underlying VM compute meter. `ComputeHR` identifies underlying compute in Microsoft’s VM usage examples; `ComputeHR_SW` is a separate premium-software meter.
 4. Verify **UnitOfMeasure** is an hour unit for the selected compute meter, and use **Quantity** (or **UsageQuantity** in some files). Do not combine quantities from disks, software, non-hour units, purchases, refunds, different VMs, or unrelated meters. Distinguish pricing models and investigate allocation or adjustment rows before summing.
-5. Create a PivotTable or Power Query grouping by **Date**, **ResourceId**, **MeterId**, **UnitOfMeasure**, and, when present, **PricingModel** and **BillingCurrency**. Sum the selected usage **Quantity**; separately sum the available pre-credit, pre-tax cost field such as **CostInBillingCurrency**, **Cost**, or **PreTaxCost**. Do not mix currencies. Keep different meters and pricing models separate until their meaning is confirmed.
-6. To display the resulting decimal hours as hours and minutes, if the PivotTable quantity is in cell `B2`, enter `=ROUND(B2*60,0)/1440` in another cell and format it as `[h]:mm`. For example, `1.5` billed hours displays as `1:30`. Rounding here is for presentation; keep the original decimal quantity for reconciliation.
+5. Load the filtered data into an Excel table and choose **Insert > PivotTable**. Put **Date** (or **UsageDateTime**), **ResourceId** (or **InstanceId**), **MeterId**, **UnitOfMeasure**, and, when present, **PricingModel** and **BillingCurrency** (or **Currency**) in **Rows**. Put **Quantity** (or **UsageQuantity**) and one available pre-credit, pre-tax cost field such as **CostInBillingCurrency**, **Cost**, or **PreTaxCost** in **Values**. In **Value Field Settings**, select **Sum** for both numeric fields. Do not mix currencies, meters, or pricing models.
+6. To display the resulting decimal hours as hours and minutes, if a PivotTable quantity is in cell `B2`, enter `=ROUND(B2*60,0)/1440` outside the PivotTable and format it using **Format Cells > Custom > [h]:mm**. For example, `1.5` billed hours displays as `1:30`. Rounding here is for presentation; keep the original decimal quantity for reconciliation.
 
 > [!NOTE]
 > Daily usage quantities are billing records, not exact VM start/stop timestamps. Verify the unit and meter in your file; multiple rows can exist for the same day. Don't count a software meter as another hour of infrastructure runtime.
+
+## Worked Example
+
+These are **illustrative values**, not data from a subscription. Assume both rows are usage for the same VM, date, compute meter, hour unit, pricing model, and currency:
+
+| Date | Quantity (hours) | Pre-tax cost (USD) |
+| --- | ---: | ---: |
+| 2026-10-01 | 1.50 | 0.30 |
+| 2026-10-01 | 0.25 | 0.05 |
+
+The PivotTable shows **1.75 hours** and **USD 0.35**. The formula above displays the quantity as **1:45**. Keep the two original rows for reconciliation; this example does not establish when the VM started or stopped.
 
 ## REST API: Query Daily Costs
 
@@ -119,8 +158,9 @@ For eligible Enterprise Agreement and Microsoft Customer Agreement scopes, the [
    }
    ```
 
-2. For a `202` response, poll the `Location` URL after the `Retry-After` interval. On completion, download **all** report blobs from the returned manifest, treating their short-lived URLs as secrets.
-3. Filter and group the resulting records as described in [Get Billed Hours and Minutes by Day](#get-billed-hours-and-minutes-by-day).
+2. Authenticate the request to Azure Resource Manager. For a `202` response, wait the `Retry-After` interval, then send an authenticated `GET` to the `Location` URL. A further `202` means the report is still being generated; wait and poll again.
+3. On a completed `200` response, check the operation status and download **all** `manifest.blobs[].blobLink` files before `validTill`. The download links are short-lived secrets: don't share them or include them in logs. A `204` response has no content; investigate the scope, period, and available data instead of treating it as a downloaded report. Surface authorization, throttling, and other errors rather than assuming success.
+4. Filter and group the resulting records as described in [Get Billed Hours and Minutes by Day](#get-billed-hours-and-minutes-by-day).
 
 The API supports ranges of at most one month and no older than 13 months, and does not support resource-group or management-group scope. For other account types or larger recurring datasets, use [Cost Management exports](https://learn.microsoft.com/en-us/azure/cost-management-billing/automate/usage-details-best-practices).
 
@@ -131,6 +171,13 @@ The API supports ranges of at most one month and no older than 13 months, and do
 - **Stopped versus deallocated:** A stopped VM that remains allocated can still incur compute charges. Deallocating the VM stops the VM compute charge, but disks, IP addresses, and other services can still incur charges. See [VM power states](https://learn.microsoft.com/en-us/azure/virtual-machines/states-billing).
 - **Latency and reconciliation:** Usage can arrive later and open-period charges can be rerated. Portal display totals may be rounded. Use the correct billing period and invoice scope for reconciliation; confirm the date and time-zone semantics for the report you receive.
 - **Privacy:** Redact or replace subscription and tenant IDs, resource names, billing information, emails, and secrets before sharing any screenshots or reports. Recheck the entire image, including titles, URLs, legends, and sidebars.
+
+## Troubleshooting
+
+- **No download or access denied:** Check the selected billing scope, agreement, cost-visibility settings, and billing or Azure RBAC permissions. Billing downloads and storage exports have different requirements.
+- **VM or day missing:** Confirm the subscription, exact resource ID, date range, billing scope, and data latency. Check all partitions of the selected export run and check for filters excluding the relevant records.
+- **Quantity is not in hours:** Inspect the meter and `UnitOfMeasure`; don't convert disk capacity, transactions, software, or other units into VM compute time.
+- **Totals differ:** Check actual versus amortized cost, currency, rounding, purchases, credits, taxes, and charges on related resources. Don't add overlapping daily export snapshots.
 
 ## References
 
