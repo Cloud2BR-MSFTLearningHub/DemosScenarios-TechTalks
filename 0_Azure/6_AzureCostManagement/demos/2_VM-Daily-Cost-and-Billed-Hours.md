@@ -9,12 +9,10 @@ Last updated: 2026-11-16
 
 ----------
 
-## Overview
-
-Use **Cost analysis** to see how VM costs change by day. For the **billed compute quantity**, download or export the detailed usage records, select the VM compute meter measured in hours, and convert the decimal hours to hours and minutes. A Cost Management query can return daily costs, but it does not replace the detailed records needed for the quantity.
+> Use **Cost analysis** to see how VM costs change by day. For the **billed compute quantity**, download or export the detailed usage records, select the VM compute meter measured in hours, and convert the decimal hours to hours and minutes. A Cost Management query can return daily costs, but it does not replace the detailed records needed for the quantity.
 
 > [!IMPORTANT]
-> Billing data, resource IDs, and exported files can be sensitive. This guide uses placeholders, public Microsoft Learn images, and a portal reference. No subscription identifiers or billing values are published. Do not publish unredacted portal screenshots, account or subscription IDs, resource names, invoices, tokens, or downloaded reports.
+> Billing data, resource IDs, and exported files can be sensitive. This guide uses placeholders, public Microsoft Learn images, and a portal reference. Do not publish unredacted portal screenshots, account or subscription IDs, resource names, invoices, tokens, or downloaded reports.
 
 <details>
 <summary><b>Table of Contents</b> (Click to expand)</summary>
@@ -82,11 +80,11 @@ Use **Cost analysis** to see how VM costs change by day. For the **billed comput
 
 ![Microsoft Learn example of the date selector with Last month and Custom date range](./media/learn-cost-date-selector.png)
 
-**Visual reference:** Choose a common analysis period. Public Microsoft Learn example from [Select a date range](https://learn.microsoft.com/en-us/azure/cost-management-billing/costs/customize-cost-analysis-views#select-a-date-range); the dates are illustrative.
+>  Choose a common analysis period. Public Microsoft Learn example from [Select a date range](https://learn.microsoft.com/en-us/azure/cost-management-billing/costs/customize-cost-analysis-views#select-a-date-range); the dates are illustrative.
 
 ![Microsoft Learn example of the Actual cost and Amortized cost metric selector](./media/learn-cost-metric-selector.png)
 
-**Visual reference:** Select the cost basis before comparing results. Public Microsoft Learn example from [Switch between actual and amortized cost](https://learn.microsoft.com/en-us/azure/cost-management-billing/costs/customize-cost-analysis-views#switch-between-actual-and-amortized-cost); the amount is not from your subscription.
+>  Select the cost basis before comparing results. Public Microsoft Learn example from [Switch between actual and amortized cost](https://learn.microsoft.com/en-us/azure/cost-management-billing/costs/customize-cost-analysis-views#switch-between-actual-and-amortized-cost); the amount is not from your subscription.
 
 ### Apply and Remove Filters
 
@@ -114,15 +112,15 @@ Use **Group by** to split the selected costs into categories; it does not itself
 
 ![Microsoft Learn example of Group by with Resource, Location, Meter, and Meter subcategory choices](./media/learn-cost-group-by.png)
 
-**Visual reference:** Choose a grouping after applying filters. Public Microsoft Learn example from [View cost breakdown by selected dimensions](https://learn.microsoft.com/en-us/azure/cost-management-billing/costs/cost-analysis-common-uses#view-cost-breakdown-by-selected-dimensions). This illustrates the selector, not a VM-only result.
+>  Choose a grouping after applying filters. Public Microsoft Learn example from [View cost breakdown by selected dimensions](https://learn.microsoft.com/en-us/azure/cost-management-billing/costs/cost-analysis-common-uses#view-cost-breakdown-by-selected-dimensions). This illustrates the selector, not a VM-only result.
 
 ![Azure portal reference showing Cost analysis, Download, filter controls, and Daily granularity](./media/azure-cost-analysis-daily-redacted.png)
 
-**Visual reference:** Azure portal captured on November 16, 2026, showing the toolbar, filter controls, and **Granularity: Daily**. This is not a VM-filtered result or a downloaded usage report. Changing the granularity does not rename the selected view. The **Download** toolbar action is not a substitute for obtaining the detailed usage records described below. No live REST API request was validated in this session.
+>  Azure portal captured on November 16, 2026, showing the toolbar, filter controls, and **Granularity: Daily**. This is not a VM-filtered result or a downloaded usage report. Changing the granularity does not rename the selected view. The **Download** toolbar action is not a substitute for obtaining the detailed usage records described below. No live REST API request was validated in this session.
 
 ![Public Microsoft Learn example of Cost analysis filtered to Virtual Machines](https://learn.microsoft.com/en-us/azure/virtual-machines/media/plan-to-manage-costs/virtual-machines-pricing-costs-service-filter.png)
 
-**Visual reference:** Public example from [Monitor costs for virtual machines](https://learn.microsoft.com/en-us/azure/virtual-machines/cost-optimization-monitor-costs#monitor-costs); it does not show your subscription. The portal layout and available filters may vary.
+>  Public example from [Monitor costs for virtual machines](https://learn.microsoft.com/en-us/azure/virtual-machines/cost-optimization-monitor-costs#monitor-costs); it does not show your subscription. The portal layout and available filters may vary.
 
 ### Nine Useful Portal Views
 
@@ -137,7 +135,7 @@ These examples show how to configure views, not nine guaranteed built-in view na
 
 ![Microsoft Learn example highlighting Daily granularity in a stacked-column chart](./media/learn-cost-daily-granularity.png)
 
-**Visual reference:** Daily columns show separate dates. Public Microsoft Learn example from [View costs per day or by month](https://learn.microsoft.com/en-us/azure/cost-management-billing/costs/cost-analysis-common-uses#view-costs-per-day-or-by-month). Apply the single-VM filters above; this generic example is not VM-filtered, and forecast columns are estimates.
+>  Daily columns show separate dates. Public Microsoft Learn example from [View costs per day or by month](https://learn.microsoft.com/en-us/azure/cost-management-billing/costs/cost-analysis-common-uses#view-costs-per-day-or-by-month). Apply the single-VM filters above; this generic example is not VM-filtered, and forecast columns are estimates.
 
 #### 2. All VMs: daily comparison
 
@@ -148,7 +146,7 @@ These examples show how to configure views, not nine guaranteed built-in view na
 
 ![Microsoft Learn example with Service name set to virtual machines, Group by Resource, and Daily granularity](./media/learn-vm-daily-by-resource.png)
 
-**Visual reference:** The service filter, resource grouping, and Daily control work together. Public Microsoft Learn example from [Review invoiced charges in Cost Analysis](https://learn.microsoft.com/en-us/azure/cost-management-billing/costs/cost-analysis-common-uses#review-invoiced-charges-in-cost-analysis), shown as a Line chart. The tooltip shows daily costs, not runtime hours.
+>  The service filter, resource grouping, and Daily control work together. Public Microsoft Learn example from [Review invoiced charges in Cost Analysis](https://learn.microsoft.com/en-us/azure/cost-management-billing/costs/cost-analysis-common-uses#review-invoiced-charges-in-cost-analysis), shown as a Line chart. The tooltip shows daily costs, not runtime hours.
 
 #### 3. One VM: meter breakdown
 
@@ -159,7 +157,7 @@ These examples show how to configure views, not nine guaranteed built-in view na
 
 ![Microsoft Learn example showing Cost by service in Table format grouped by Service tier](./media/learn-cost-service-tier-table.png)
 
-**Visual reference:** The alternative **Service tier** grouping separates service tiers in a period-total table. Public Microsoft Learn example from [View cost breakdown by Azure service](https://learn.microsoft.com/en-us/azure/cost-management-billing/costs/cost-analysis-common-uses#view-cost-breakdown-by-azure-service). This sample includes multiple services; apply the VM filters and choose **Meter** for the meter-level view.
+>  The alternative **Service tier** grouping separates service tiers in a period-total table. Public Microsoft Learn example from [View cost breakdown by Azure service](https://learn.microsoft.com/en-us/azure/cost-management-billing/costs/cost-analysis-common-uses#view-cost-breakdown-by-azure-service). This sample includes multiple services; apply the VM filters and choose **Meter** for the meter-level view.
 
 #### 4. Most expensive VMs in a period
 
@@ -170,7 +168,7 @@ These examples show how to configure views, not nine guaranteed built-in view na
 
 ![Microsoft Learn example highlighting Cost by resource, Table, and Granularity None](./media/learn-cost-resource-table.png)
 
-**Visual reference:** Locate the view and table controls, then apply the VM-service filter from the instructions. Public Microsoft Learn example from [View cost breakdown by Azure resource](https://learn.microsoft.com/en-us/azure/cost-management-billing/costs/cost-analysis-common-uses#view-cost-breakdown-by-azure-resource); this unfiltered sample includes other resource types.
+>  Locate the view and table controls, then apply the VM-service filter from the instructions. Public Microsoft Learn example from [View cost breakdown by Azure resource](https://learn.microsoft.com/en-us/azure/cost-management-billing/costs/cost-analysis-common-uses#view-cost-breakdown-by-azure-resource); this unfiltered sample includes other resource types.
 
 #### 5. Monthly trend versus accumulated spend
 
@@ -181,11 +179,11 @@ These examples show how to configure views, not nine guaranteed built-in view na
 
 ![Microsoft Learn example of Monthly granularity using a stacked-column chart](./media/learn-cost-monthly-trend.png)
 
-**Visual reference:** Compare monthly totals rather than accumulated points. Public Microsoft Learn example from [Granularity examples](https://learn.microsoft.com/en-us/azure/cost-management-billing/costs/customize-cost-analysis-views#granularity-examples); these are illustrative monthly costs, not VM hours or your charges.
+>  Compare monthly totals rather than accumulated points. Public Microsoft Learn example from [Granularity examples](https://learn.microsoft.com/en-us/azure/cost-management-billing/costs/customize-cost-analysis-views#granularity-examples); these are illustrative monthly costs, not VM hours or your charges.
 
 ![Microsoft Learn example showing the same monthly values as an accumulated running total](./media/learn-cost-accumulated-trend.png)
 
-**Visual reference:** Switching to **Accumulated** adds prior periods to each point. Public Microsoft Learn example from [Granularity examples](https://learn.microsoft.com/en-us/azure/cost-management-billing/costs/customize-cost-analysis-views#granularity-examples), using a column chart for comparison with the monthly example. The last column is the period's running total, not that month's independent cost.
+>  Switching to **Accumulated** adds prior periods to each point. Public Microsoft Learn example from [Granularity examples](https://learn.microsoft.com/en-us/azure/cost-management-billing/costs/customize-cost-analysis-views#granularity-examples), using a column chart for comparison with the monthly example. The last column is the period's running total, not that month's independent cost.
 
 #### 6. Workload cost: compute plus supporting services
 
@@ -197,7 +195,7 @@ These examples show how to configure views, not nine guaranteed built-in view na
 
 ![Microsoft Learn example of a daily stacked-column chart grouped by Service name](./media/learn-cost-services-daily.png)
 
-**Visual reference:** Grouping by **Service name** reveals the services contributing to daily spend. Public Microsoft Learn example from [Group costs](https://learn.microsoft.com/en-us/azure/cost-management-billing/costs/customize-cost-analysis-views#group-costs). Apply the workload's resource-group or tag filter; this example is not scoped to your workload, and forecast values are estimates.
+>  Grouping by **Service name** reveals the services contributing to daily spend. Public Microsoft Learn example from [Group costs](https://learn.microsoft.com/en-us/azure/cost-management-billing/costs/customize-cost-analysis-views#group-costs). Apply the workload's resource-group or tag filter; this example is not scoped to your workload, and forecast values are estimates.
 
 #### 7. On-demand, Spot, and commitment allocation
 
@@ -209,11 +207,11 @@ These examples show how to configure views, not nine guaranteed built-in view na
 
 ![Microsoft Learn example of the Pricing Model filter with Spot selected and the confirmation checkmark visible](./media/learn-vm-spot-filter.png)
 
-**Visual reference:** Choose a pricing-model value and confirm the filter. Public Microsoft Learn example from [View your Spot VM charges](https://learn.microsoft.com/en-us/azure/cost-management-billing/costs/cost-analysis-common-uses#view-your-spot-vm-charges). Available values depend on the scope and data.
+>  Choose a pricing-model value and confirm the filter. Public Microsoft Learn example from [View your Spot VM charges](https://learn.microsoft.com/en-us/azure/cost-management-billing/costs/cost-analysis-common-uses#view-your-spot-vm-charges). Available values depend on the scope and data.
 
 ![Microsoft Learn example of amortized reservation costs grouped by Charge type with unusedreservation and usage](./media/learn-cost-unused-reservation.png)
 
-**Visual reference:** With **Amortized cost**, **Pricing model = Reservation**, and **Group by = Charge type**, unused reservation allocation can appear separately from usage. Public Microsoft Learn example from [View unused RI costs in Cost Analysis](https://learn.microsoft.com/en-us/azure/cost-management-billing/costs/cost-analysis-common-uses#view-unused-ri-costs-in-cost-analysis). Keep the broader scope needed to see unused costs; this sample uses Monthly granularity and includes forecast estimates.
+>  With **Amortized cost**, **Pricing model = Reservation**, and **Group by = Charge type**, unused reservation allocation can appear separately from usage. Public Microsoft Learn example from [View unused RI costs in Cost Analysis](https://learn.microsoft.com/en-us/azure/cost-management-billing/costs/cost-analysis-common-uses#view-unused-ri-costs-in-cost-analysis). Keep the broader scope needed to see unused costs; this sample uses Monthly granularity and includes forecast estimates.
 
 
 #### 8. Compare resource groups or regions
@@ -225,11 +223,11 @@ These examples show how to configure views, not nine guaranteed built-in view na
 
 ![Microsoft Learn example of daily costs grouped by Resource group name in an area chart](./media/learn-cost-resource-groups.png)
 
-**Visual reference:** Resource-group grouping splits the selected costs by group. Public Microsoft Learn example from [Group costs](https://learn.microsoft.com/en-us/azure/cost-management-billing/costs/customize-cost-analysis-views#group-costs), using **Area** rather than the suggested stacked columns. Apply the VM-service filter for a VM-only comparison.
+>  Resource-group grouping splits the selected costs by group. Public Microsoft Learn example from [Group costs](https://learn.microsoft.com/en-us/azure/cost-management-billing/costs/customize-cost-analysis-views#group-costs), using **Area** rather than the suggested stacked columns. Apply the VM-service filter for a VM-only comparison.
 
 ![Microsoft Learn example of Service name, Location, and Resource group name pivot charts](./media/learn-cost-pivot-charts.png)
 
-**Visual reference:** The pivot charts below the main chart provide additional service, location, and resource-group perspectives. Public Microsoft Learn example from [Group costs](https://learn.microsoft.com/en-us/azure/cost-management-billing/costs/customize-cost-analysis-views#group-costs). They follow the main filters and cost metric, but not its **Group by** or **Granularity** settings; they are not daily-cost charts.
+>  The pivot charts below the main chart provide additional service, location, and resource-group perspectives. Public Microsoft Learn example from [Group costs](https://learn.microsoft.com/en-us/azure/cost-management-billing/costs/customize-cost-analysis-views#group-costs). They follow the main filters and cost metric, but not its **Group by** or **Granularity** settings; they are not daily-cost charts.
 
 #### 9. Environment or cost-center view using tags
 
@@ -241,7 +239,7 @@ These examples show how to configure views, not nine guaranteed built-in view na
 
 ![Microsoft Learn example of selecting Tag in Group by and comparing environment values with Untagged](./media/learn-cost-tag-grouping.png)
 
-**Visual reference:** Select the tag key, then review each value and Untagged. Public Microsoft Learn example from [View costs for a specific tag](https://learn.microsoft.com/en-us/azure/cost-management-billing/costs/cost-analysis-common-uses#view-costs-for-a-specific-tag); this example uses a table with Granularity None.
+>  Select the tag key, then review each value and Untagged. Public Microsoft Learn example from [View costs for a specific tag](https://learn.microsoft.com/en-us/azure/cost-management-billing/costs/cost-analysis-common-uses#view-costs-for-a-specific-tag); this example uses a table with Granularity None.
 
 ### Save, Reopen, and Download a View
 
@@ -254,19 +252,19 @@ These examples show how to configure views, not nine guaranteed built-in view na
 
 ![Microsoft Learn example highlighting Save and Save as in the Cost Analysis toolbar](./media/learn-cost-save-options.png)
 
-**Visual reference:** Use **Save as** to preserve a new configuration without overwriting an existing view. Public Microsoft Learn example from [To save a view](https://learn.microsoft.com/en-us/azure/cost-management-billing/costs/save-share-views#to-save-a-view).
+>  Use **Save as** to preserve a new configuration without overwriting an existing view. Public Microsoft Learn example from [To save a view](https://learn.microsoft.com/en-us/azure/cost-management-billing/costs/save-share-views#to-save-a-view).
 
 ![Microsoft Learn example of the Save as dialog with view name and private-view option](./media/learn-cost-save-name.png)
 
-**Visual reference:** Name the view and check its privacy setting before saving. Public Microsoft Learn example from [To save a view](https://learn.microsoft.com/en-us/azure/cost-management-billing/costs/save-share-views#to-save-a-view). Availability depends on scope and permissions.
+>  Name the view and check its privacy setting before saving. Public Microsoft Learn example from [To save a view](https://learn.microsoft.com/en-us/azure/cost-management-billing/costs/save-share-views#to-save-a-view). Availability depends on scope and permissions.
 
 ![Microsoft Learn example of reopening a saved view from the View selector](./media/learn-cost-saved-views.png)
 
-**Visual reference:** Reopen a saved configuration from the view list, then recheck its dates and filters. Public Microsoft Learn example from [To save a view](https://learn.microsoft.com/en-us/azure/cost-management-billing/costs/save-share-views#to-save-a-view).
+>  Reopen a saved configuration from the view list, then recheck its dates and filters. Public Microsoft Learn example from [To save a view](https://learn.microsoft.com/en-us/azure/cost-management-billing/costs/save-share-views#to-save-a-view).
 
 ![Microsoft Learn example of the Download pane with options to include nested table details](./media/learn-cost-download-options.png)
 
-**Visual reference:** Download options depend on the selected view. Public Microsoft Learn example from [Download cost details](https://learn.microsoft.com/en-us/azure/cost-management-billing/costs/quick-acm-cost-analysis#download-cost-details), showing a **Subscriptions** smart view and its nested resource-group option, not the VM view. Summarized table data is not the raw compute-usage file.
+>  Download options depend on the selected view. Public Microsoft Learn example from [Download cost details](https://learn.microsoft.com/en-us/azure/cost-management-billing/costs/quick-acm-cost-analysis#download-cost-details), showing a **Subscriptions** smart view and its nested resource-group option, not the VM view. Summarized table data is not the raw compute-usage file.
 
 See Microsoft's [customize Cost Analysis views](https://learn.microsoft.com/en-us/azure/cost-management-billing/costs/customize-cost-analysis-views) and [common Cost Analysis uses](https://learn.microsoft.com/en-us/azure/cost-management-billing/costs/cost-analysis-common-uses) for supported controls and current examples.
 
@@ -285,19 +283,19 @@ Choose the billing scope that includes the VM and use one of the following optio
 
 ![Microsoft Learn MOSP example highlighting Invoices and a billing-period download icon](./media/learn-usage-mosp-invoices.png)
 
-**Visual reference:** For MOSP/pay-as-you-go, locate the billing period under **Invoices**, then open its download pane and choose **Usage Details**. Public Microsoft Learn example from [Download usage for MOSP billing accounts](https://learn.microsoft.com/en-us/azure/cost-management-billing/understand/download-azure-daily-usage#download-usage-for-mosp-billing-accounts).
+>  For MOSP/pay-as-you-go, locate the billing period under **Invoices**, then open its download pane and choose **Usage Details**. Public Microsoft Learn example from [Download usage for MOSP billing accounts](https://learn.microsoft.com/en-us/azure/cost-management-billing/understand/download-azure-daily-usage#download-usage-for-mosp-billing-accounts).
 
 ![Microsoft Learn EA example highlighting Usage and charges and a month's Download icon](./media/learn-usage-ea-month.png)
 
-**Visual reference:** For EA, open **Usage + charges** and choose the month's download action. Public Microsoft Learn example from [Download usage for EA customers](https://learn.microsoft.com/en-us/azure/cost-management-billing/understand/download-azure-daily-usage#download-usage-for-ea-customers).
+>  For EA, open **Usage + charges** and choose the month's download action. Public Microsoft Learn example from [Download usage for EA customers](https://learn.microsoft.com/en-us/azure/cost-management-billing/understand/download-azure-daily-usage#download-usage-for-ea-customers).
 
 ![Microsoft Learn EA example of Usage Details charge-type selection and Prepare document](./media/learn-usage-ea-charge-type.png)
 
-**Visual reference:** Select the required cost basis under **Usage Details**, then choose **Prepare document** and download the prepared CSV. Public Microsoft Learn example from [Download usage for EA customers](https://learn.microsoft.com/en-us/azure/cost-management-billing/understand/download-azure-daily-usage#download-usage-for-ea-customers). The actual-charge selection can include purchases; filter to the intended usage rows when calculating hours.
+>  Select the required cost basis under **Usage Details**, then choose **Prepare document** and download the prepared CSV. Public Microsoft Learn example from [Download usage for EA customers](https://learn.microsoft.com/en-us/azure/cost-management-billing/understand/download-azure-daily-usage#download-usage-for-ea-customers). The actual-charge selection can include purchases; filter to the intended usage rows when calculating hours.
 
 ![Microsoft Learn MCA example highlighting Download usage and prices and the Azure usage file Prepare action](./media/learn-usage-mca-prepare.png)
 
-**Visual reference:** MCA also offers an overview-page route: **Shortcuts > Download usage and prices > Azure usage file > Prepare**, then **Download** when ready. Public Microsoft Learn example from [Download usage file from the billing account or billing profile overview page](https://learn.microsoft.com/en-us/azure/cost-management-billing/understand/download-azure-daily-usage#download-usage-file-from-the-billing-account-or-billing-profile-overview-page). This is an alternative to the invoice route above.
+>  MCA also offers an overview-page route: **Shortcuts > Download usage and prices > Azure usage file > Prepare**, then **Download** when ready. Public Microsoft Learn example from [Download usage file from the billing account or billing profile overview page](https://learn.microsoft.com/en-us/azure/cost-management-billing/understand/download-azure-daily-usage#download-usage-file-from-the-billing-account-or-billing-profile-overview-page). This is an alternative to the invoice route above.
 
 ### Option B: Export detailed usage to storage
 
@@ -309,23 +307,23 @@ Choose the billing scope that includes the VM and use one of the following optio
 
 ![Microsoft Learn example of export templates on the Basics tab](./media/learn-export-templates.png)
 
-**Visual reference:** Start with a suitable template or **Create your own export**. Public Microsoft Learn example from [Select the export template](https://learn.microsoft.com/en-us/azure/cost-management-billing/costs/tutorial-improved-exports#select-the-export-template). For this guide's usage-file workflow, choose actual cost and usage details rather than assuming the FOCUS template has the same columns.
+>  Start with a suitable template or **Create your own export**. Public Microsoft Learn example from [Select the export template](https://learn.microsoft.com/en-us/azure/cost-management-billing/costs/tutorial-improved-exports#select-the-export-template). For this guide's usage-file workflow, choose actual cost and usage details rather than assuming the FOCUS template has the same columns.
 
 ![Public Microsoft Learn example of the Cost Management export dataset configuration](https://learn.microsoft.com/en-us/azure/cost-management-billing/costs/media/tutorial-improved-exports/add-export.png)
 
-**Visual reference:** Public example from [Create and manage Cost Management exports](https://learn.microsoft.com/en-us/azure/cost-management-billing/costs/tutorial-improved-exports); it does not show your subscription.
+>  Public example from [Create and manage Cost Management exports](https://learn.microsoft.com/en-us/azure/cost-management-billing/costs/tutorial-improved-exports); it does not show your subscription.
 
 ![Microsoft Learn example of export Destination settings for storage, container, directory, format, and compression](./media/learn-export-destination.png)
 
-**Visual reference:** Confirm the destination, file format, and compression before creating the export. Public Microsoft Learn example from [Define the export destination](https://learn.microsoft.com/en-us/azure/cost-management-billing/costs/tutorial-improved-exports#define-the-export-destination). The sample selects **Parquet/Snappy**; choose **CSV** and a supported compression option for the Excel workflow described here.
+>  Confirm the destination, file format, and compression before creating the export. Public Microsoft Learn example from [Define the export destination](https://learn.microsoft.com/en-us/azure/cost-management-billing/costs/tutorial-improved-exports#define-the-export-destination). The sample selects **Parquet/Snappy**; choose **CSV** and a supported compression option for the Excel workflow described here.
 
 ![Microsoft Learn example of export run history with Run now, Export selected dates, and succeeded runs](./media/learn-export-run-history.png)
 
-**Visual reference:** Inspect **Run history** and the execution status; use **Run now** or **Export selected dates** only when needed. Public Microsoft Learn example from [Manage exports](https://learn.microsoft.com/en-us/azure/cost-management-billing/costs/tutorial-improved-exports#manage-exports). This sample uses a FOCUS dataset to illustrate the controls, not this guide's actual-cost schema.
+>  Inspect **Run history** and the execution status; use **Run now** or **Export selected dates** only when needed. Public Microsoft Learn example from [Manage exports](https://learn.microsoft.com/en-us/azure/cost-management-billing/costs/tutorial-improved-exports#manage-exports). This sample uses a FOCUS dataset to illustrate the controls, not this guide's actual-cost schema.
 
 ![Microsoft Learn example of the storage account page with Open in Explorer](./media/learn-export-storage-explorer.png)
 
-**Visual reference:** Open the configured storage destination in Storage Explorer, then locate the export's container and run folder. Public Microsoft Learn example from [Verify that data is collected](https://learn.microsoft.com/en-us/azure/cost-management-billing/costs/tutorial-improved-exports#verify-that-data-is-collected); this is an older portal layout. Obtain every partition from the same completed run.
+>  Open the configured storage destination in Storage Explorer, then locate the export's container and run folder. Public Microsoft Learn example from [Verify that data is collected](https://learn.microsoft.com/en-us/azure/cost-management-billing/costs/tutorial-improved-exports#verify-that-data-is-collected); this is an older portal layout. Obtain every partition from the same completed run.
 
 ## Get Billed Hours and Minutes by Day
 
@@ -341,7 +339,7 @@ Choose the billing scope that includes the VM and use one of the following optio
 
 ![Illustrative workflow from detailed usage records through VM and compute-meter filters to summed decimal hours and hours-minutes formatting](./media/vm-billed-hours-workflow.svg)
 
-**Visual reference:** Follow the detailed-usage workflow before formatting the summed quantity as hours and minutes. This original diagram uses the illustrative values in the worked example below; it is not a portal screenshot or a VM start/stop timeline.
+>  Follow the detailed-usage workflow before formatting the summed quantity as hours and minutes. This original diagram uses the illustrative values in the worked example below; it is not a portal screenshot or a VM start/stop timeline.
 
 ## Worked Example
 
