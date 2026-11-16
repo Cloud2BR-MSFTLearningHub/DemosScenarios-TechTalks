@@ -14,7 +14,7 @@ Last updated: 2026-11-16
 Use **Cost analysis** to see how VM costs change by day. For the **billed compute quantity**, download or export the detailed usage records, select the VM compute meter measured in hours, and convert the decimal hours to hours and minutes. A Cost Management query can return daily costs, but it does not replace the detailed records needed for the quantity.
 
 > [!IMPORTANT]
-> Billing data, resource IDs, and exported files can be sensitive. This guide uses placeholders, public Microsoft Learn images, and a cropped, redacted portal reference. No subscription identifiers or billing values are published. Do not publish unredacted portal screenshots, account or subscription IDs, resource names, invoices, tokens, or downloaded reports.
+> Billing data, resource IDs, and exported files can be sensitive. This guide uses placeholders, public Microsoft Learn images, and a portal reference. No subscription identifiers or billing values are published. Do not publish unredacted portal screenshots, account or subscription IDs, resource names, invoices, tokens, or downloaded reports.
 
 <details>
 <summary><b>Table of Contents</b> (Click to expand)</summary>
@@ -50,7 +50,7 @@ Use **Cost analysis** to see how VM costs change by day. For the **billed comput
 - [Query API](https://learn.microsoft.com/en-us/rest/api/cost-management/query/usage?view=rest-cost-management-2025-03-01)
 - [Generate Cost Details Report API](https://learn.microsoft.com/en-us/rest/api/cost-management/generate-cost-details-report/create-operation?view=rest-cost-management-2025-03-01)
 
-**Image credits:** The eight local `learn-*.png` screenshots are unmodified public examples from Microsoft Learn's **Customize Cost Analysis views** and **Common Cost Analysis uses**, linked in their captions. Copyright Microsoft; reproduced under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) as provided by the [Azure documentation license](https://github.com/MicrosoftDocs/azure-docs/blob/main/LICENSE). They show Microsoft's example names, dates, and costs, not your subscription. The existing public images and redacted portal reference are identified separately in their captions. Portal layouts can change.
+**Image credits:** The eight local `learn-*.png` screenshots are unmodified public examples from Microsoft Learn's **Customize Cost Analysis views** and **Common Cost Analysis uses**, linked in their captions. Copyright Microsoft; reproduced under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) as provided by the [Azure documentation license](https://github.com/MicrosoftDocs/azure-docs/blob/main/LICENSE). They show Microsoft's example names, dates, and costs, not your subscription. The existing public images and portal reference are identified separately in their captions. Portal layouts can change.
 
 </details>
 
@@ -113,9 +113,9 @@ Use **Group by** to split the selected costs into categories; it does not itself
 
 *Choose a grouping after applying filters. Public Microsoft Learn example from [View cost breakdown by selected dimensions](https://learn.microsoft.com/en-us/azure/cost-management-billing/costs/cost-analysis-common-uses#view-cost-breakdown-by-selected-dimensions). This illustrates the selector, not a VM-only result.*
 
-![Redacted Azure portal reference showing Cost analysis, Download, and Daily granularity](./media/azure-cost-analysis-daily-redacted.png)
+![Azure portal reference showing Cost analysis, Download, filter controls, and Daily granularity](./media/azure-cost-analysis-daily-redacted.png)
 
-*Captured from a signed-in Azure portal session on November 16, 2026. Browser chrome, identity, subscription name, scope name, filter selection, billing amounts, budget, and charts have been cropped out or covered with opaque redactions. This reference shows the toolbar and **Granularity: Daily** control, not a VM-filtered result or a downloaded usage report. Changing the granularity does not rename the selected view. The **Download** toolbar action is not a substitute for obtaining the detailed usage records described below. No live REST API request was validated in this session.*
+*Azure portal reference captured on November 16, 2026, showing the toolbar, filter controls, and **Granularity: Daily**. This is not a VM-filtered result or a downloaded usage report. Changing the granularity does not rename the selected view. The **Download** toolbar action is not a substitute for obtaining the detailed usage records described below. No live REST API request was validated in this session.*
 
 ![Public Microsoft Learn example of Cost analysis filtered to Virtual Machines](https://learn.microsoft.com/en-us/azure/virtual-machines/media/plan-to-manage-costs/virtual-machines-pricing-costs-service-filter.png)
 
