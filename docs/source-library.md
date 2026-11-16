@@ -1,6 +1,6 @@
 # Source library
 
-This index provides complete coverage of the repository's **209 Markdown guides**. Each source-domain link opens the original detailed demos, scenarios, and tech-talk material maintained in the repository.
+This index provides complete coverage of the repository's **210 Markdown guides**. Each source-domain link opens the original detailed demos, scenarios, and tech-talk material maintained in the repository.
 
 Every original guide is also rendered in this site under the [hosted source library](source/README.md), preserving its original directory structure.
 
@@ -18,7 +18,7 @@ Every original guide is also rendered in this site under the [hosted source libr
 | Azure AI and machine learning | 57 | [Azure AI](https://github.com/Cloud2BR-MSFTLearningHub/DemosScenarios-TechTalks/tree/main/0_Azure/3_AzureAI) |
 | Azure DevOps | 4 | [Azure DevOps](https://github.com/Cloud2BR-MSFTLearningHub/DemosScenarios-TechTalks/tree/main/0_Azure/4_AzureDevOps) |
 | Data protection and management | 12 | [Data protection and management](https://github.com/Cloud2BR-MSFTLearningHub/DemosScenarios-TechTalks/tree/main/0_Azure/5_DataProtectionMng) |
-| Cost management | 3 | [Cost management](https://github.com/Cloud2BR-MSFTLearningHub/DemosScenarios-TechTalks/tree/main/0_Azure/6_AzureCostManagement) |
+| Cost management | 4 | [Cost management](https://github.com/Cloud2BR-MSFTLearningHub/DemosScenarios-TechTalks/tree/main/0_Azure/6_AzureCostManagement) |
 | Azure support | 1 | [Azure support](https://github.com/Cloud2BR-MSFTLearningHub/DemosScenarios-TechTalks/tree/main/0_Azure/7_AzureSupport) |
 | Azure applications | 9 | [Azure apps](https://github.com/Cloud2BR-MSFTLearningHub/DemosScenarios-TechTalks/tree/main/0_Azure/8_AzureApps) |
 | Azure updates | 5 | [What is new](https://github.com/Cloud2BR-MSFTLearningHub/DemosScenarios-TechTalks/tree/main/0_Azure/WhatsNew) |

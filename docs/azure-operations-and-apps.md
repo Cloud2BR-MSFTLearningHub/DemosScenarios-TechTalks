@@ -16,7 +16,7 @@ flowchart TB
 | DevOps | Azure DevOps overview, agent considerations, and billing/server comparisons. |
 | Governance and protection | Purview DLP, glossary, cost, enterprise/free context, Priva, security groups, custom roles, and Azure Arc. |
 | Applications and integration | App Service certificates, multi-container app to AKS, Azure Container Apps, Red Hat OpenShift, Defender, IoT, and Logic Apps scenarios. |
-| Cost and support | Billing reports, budget alerts, and Azure support material. |
+| Cost and support | Billing reports, budget alerts, [daily VM cost and billed hours](source/0_Azure/6_AzureCostManagement/demos/2_VM-Daily-Cost-and-Billed-Hours.md), and Azure support material. |
 | Industry and learning | Healthcare, retail, certification learning paths, and Azure product-news updates. |
 
 ## Operational questions to answer
