@@ -1,6 +1,6 @@
 # Microsoft Cloud Demos, Scenarios, and Tech Talks
 
-This learning hub organizes the repository's Microsoft Cloud demonstrations, scenario notes, and tech-talk material. It provides a complete, navigable path through Azure, Microsoft 365, Dynamics 365, and Power Platform topics, while retaining the original source guides for each detailed walkthrough.
+This learning hub organizes the repository's Microsoft Cloud demonstrations, scenario notes, and tech-talk material. It provides a complete, navigable path through Azure, Microsoft 365, Dynamics 365, Power Platform, and Marketplace topics, while retaining the original source guides for each detailed walkthrough.
 
 !!! warning
     These demonstrations are learning material based on personal experience. They are not official product guidance or support. Confirm current feature availability, service limits, licensing, security controls, and deployment guidance in the official Microsoft documentation before implementing a scenario.
@@ -19,6 +19,7 @@ flowchart TB
   <a class="guide-card" href="azure-operations-and-apps/"><strong>Cloud operations and apps</strong>DevOps, data protection, Purview, cost, support, application, IoT, and industry scenarios.</a>
   <a class="guide-card" href="microsoft-365-and-dynamics/"><strong>Microsoft 365 and Dynamics</strong>Productivity and business application landing points.</a>
   <a class="guide-card" href="power-platform-and-copilot/"><strong>Power Platform and Copilot</strong>Power Apps, Power BI, and Copilot Studio scenarios.</a>
+  <a class="guide-card" href="source/4_Marketplace/"><strong>Marketplace</strong>Purchasing, billing, partner offers, and Claude in Microsoft Foundry.</a>
 </div>
 
 ## How to use this hub
@@ -30,4 +31,4 @@ flowchart TB
 
 ## Complete source coverage
 
-The original repository contains **207 Markdown guides**. The [Source library](source-library.md) accounts for every guide through its source-domain indexes, including 138 detailed Azure Analytics and Azure AI documents.
+The original repository contains **209 Markdown guides**. The [Source library](source-library.md) accounts for every guide through its source-domain indexes, including 138 detailed Azure Analytics and Azure AI documents.

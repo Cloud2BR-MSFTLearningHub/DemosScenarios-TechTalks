@@ -1,5 +1,5 @@
 site_name: Microsoft Cloud Demos, Scenarios, and Tech Talks
-site_description: Learning hub for Microsoft Cloud demonstration scenarios across Azure, Microsoft 365, Dynamics 365, and Power Platform.
+site_description: Learning hub for Microsoft Cloud demonstration scenarios across Azure, Microsoft 365, Dynamics 365, Power Platform, and Marketplace.
 site_url: https://cloud2br-msftlearninghub.github.io/DemosScenarios-TechTalks/
 repo_url: https://github.com/Cloud2BR-MSFTLearningHub/DemosScenarios-TechTalks
 repo_name: Cloud2BR-MSFTLearningHub/DemosScenarios-TechTalks
@@ -66,4 +66,7 @@ nav:
   - Microsoft cloud business apps:
       - Microsoft 365 and Dynamics 365: microsoft-365-and-dynamics.md
       - Power Platform and Copilot Studio: power-platform-and-copilot.md
+  - Marketplace:
+      - Overview: source/4_Marketplace/README.md
+      - Purchase Claude through Marketplace: source/4_Marketplace/demos/0_How-to-purchase-Claude-through-Marketplace.md
   - Source library: source-library.md
