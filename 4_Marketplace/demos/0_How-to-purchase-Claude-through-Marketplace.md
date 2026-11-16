@@ -1,6 +1,6 @@
 # How to Purchase Claude through Azure Marketplace
 
-Costa Rica
+Atlanta, USA
 
 [![GitHub](https://badgen.net/badge/icon/github?icon=github&label)](https://github.com/)
 [![GitHub](https://img.shields.io/badge/--181717?logo=github&logoColor=ffffff)](https://github.com/) [Cloud2BR OSS - Learning Hub](https://github.com/Cloud2BR-MSFTLearningHub)
