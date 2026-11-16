@@ -1,6 +1,6 @@
 # Source library
 
-This index provides complete coverage of the repository's **207 Markdown guides**. Each source-domain link opens the original detailed demos, scenarios, and tech-talk material maintained in the repository.
+This index provides complete coverage of the repository's **209 Markdown guides**. Each source-domain link opens the original detailed demos, scenarios, and tech-talk material maintained in the repository.
 
 Every original guide is also rendered in this site under the [hosted source library](source/README.md), preserving its original directory structure.
 
@@ -32,6 +32,12 @@ Every original guide is also rendered in this site under the [hosted source libr
 | Dynamics 365 | 1 | [Dynamics 365](https://github.com/Cloud2BR-MSFTLearningHub/DemosScenarios-TechTalks/tree/main/2_Dynamics365) |
 | Power Platform, Power Apps, and Power BI | 3 | [Power Platform](https://github.com/Cloud2BR-MSFTLearningHub/DemosScenarios-TechTalks/tree/main/3_PowerPlatform) |
 | Copilot Studio | 3 | [Copilot Studio](https://github.com/Cloud2BR-MSFTLearningHub/DemosScenarios-TechTalks/tree/main/3_PowerPlatform/2_CopilotStudio) |
+
+## Marketplace source domain
+
+| Source domain | Guides | Detailed source |
+| --- | ---: | --- |
+| Microsoft Marketplace | 2 | [Marketplace conversations and demos](https://github.com/Cloud2BR-MSFTLearningHub/DemosScenarios-TechTalks/tree/main/4_Marketplace) |
 
 ## Reading the original material safely
 
