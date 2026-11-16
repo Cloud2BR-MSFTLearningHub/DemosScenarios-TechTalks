@@ -103,5 +103,75 @@
     "date": "2026-04-06",
     "count": 11,
     "uniques": 10
+  },
+  {
+    "date": "2026-11-01",
+    "count": 0,
+    "uniques": 0
+  },
+  {
+    "date": "2026-11-02",
+    "count": 0,
+    "uniques": 0
+  },
+  {
+    "date": "2026-11-03",
+    "count": 3,
+    "uniques": 3
+  },
+  {
+    "date": "2026-11-04",
+    "count": 3,
+    "uniques": 3
+  },
+  {
+    "date": "2026-11-05",
+    "count": 5,
+    "uniques": 4
+  },
+  {
+    "date": "2026-11-06",
+    "count": 1,
+    "uniques": 1
+  },
+  {
+    "date": "2026-11-07",
+    "count": 0,
+    "uniques": 0
+  },
+  {
+    "date": "2026-11-08",
+    "count": 3,
+    "uniques": 3
+  },
+  {
+    "date": "2026-11-09",
+    "count": 1,
+    "uniques": 1
+  },
+  {
+    "date": "2026-11-10",
+    "count": 1,
+    "uniques": 1
+  },
+  {
+    "date": "2026-11-11",
+    "count": 7,
+    "uniques": 2
+  },
+  {
+    "date": "2026-11-12",
+    "count": 0,
+    "uniques": 0
+  },
+  {
+    "date": "2026-11-13",
+    "count": 1,
+    "uniques": 1
+  },
+  {
+    "date": "2026-11-14",
+    "count": 4,
+    "uniques": 2
   }
 ]
