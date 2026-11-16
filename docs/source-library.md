@@ -42,4 +42,3 @@ Every original guide is also rendered in this site under the [hosted source libr
 ## Reading the original material safely
 
 The linked documents may contain point-in-time screenshots, preview features, personal scenarios, and configuration examples. Treat them as demonstrations: verify service names, availability, product behavior, licensing, security posture, and official guidance before applying an approach to a live environment.
-Last updated: 2026-11-16
