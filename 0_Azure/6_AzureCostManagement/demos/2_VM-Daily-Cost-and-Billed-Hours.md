@@ -21,6 +21,10 @@ Use **Cost analysis** to see how VM costs change by day. For the **billed comput
 
 - [Before You Start](#before-you-start)
 - [View Daily VM Cost in the Portal](#view-daily-vm-cost-in-the-portal)
+  - [Open and Configure the Analysis](#open-and-configure-the-analysis)
+  - [Apply and Remove Filters](#apply-and-remove-filters)
+  - [Nine Useful Portal Views](#nine-useful-portal-views)
+  - [Save, Reopen, and Download a View](#save-reopen-and-download-a-view)
 - [Download Detailed Cost and Usage](#download-detailed-cost-and-usage)
 - [Get Billed Hours and Minutes by Day](#get-billed-hours-and-minutes-by-day)
 - [Worked Example](#worked-example)
@@ -41,11 +45,43 @@ Use **Cost analysis** to see how VM costs change by day. For the **billed comput
 
 ## View Daily VM Cost in the Portal
 
-1. In the [Azure portal](https://portal.azure.com/), open **Subscriptions**, select your subscription, and choose **Cost analysis**. Confirm the scope at the top.
-2. Select an appropriate date range and **Actual cost**. Use **Daily** granularity in a cost analysis view that supports it.
-3. Use **Add filter** > **Service name** > **Virtual Machines**. To focus on one VM, add a **Resource** filter and choose that VM. Group by **Resource** to compare VMs or **Meter** to investigate which meters are contributing to cost.
-4. Inspect the daily chart and table, and save the view if your organization permits it. The daily view is a cost view; it is not an authoritative start/stop timeline or a replacement for billable usage quantity.
-5. To see the complete workload cost, review associated disk, network, backup, licensing, and other resource charges separately; a filter on the VM resource or Virtual Machines service does not automatically include all related resources.
+### Open and Configure the Analysis
+
+1. Sign in to the [Azure portal](https://portal.azure.com/). Search for **Subscriptions**, open the subscription containing the VM, and select **Cost Management > Cost analysis** in its left menu. Alternatively, search for **Cost Management**, open **Cost analysis**, and use **Scope** to select the subscription.
+2. Verify **Scope** before adding filters. Subscription scope is a useful starting point for comparing VMs. A resource-group scope excludes costs outside that group; a billing scope can include multiple subscriptions.
+3. Open the **View** selector. For the configurable chart walkthrough below, select a classic view such as **Accumulated costs** or **Cost by resource**, where available. Some portal versions expose **Resources**, **Resource groups**, **Services**, and **Reservations** as separate smart views. Their layouts and controls differ; do not expect every chart control in every smart view.
+4. Open the date selector next to the view name. Choose **Last month** for a completed calendar month, or **Custom** and enter the start and end dates for your investigation. Apply the dates. Use the same date range throughout the comparison.
+5. Open the metric selector beside the cost total and choose **Actual cost** for the first pass. Check the displayed currency. Use **Amortized cost**, where supported, only when you intentionally want allocated reservation or savings-plan costs rather than the actual-cost view.
+6. Above the main chart, open **Granularity > Daily**. Each column now represents a UTC day, not the running total. **Accumulated** includes previous days, **Monthly** groups by calendar month, and **None** shows a total for the whole selected period.
+7. Open the chart-type selector, which may currently say **Area**, and choose **Column (stacked)**. Use **Line** to compare trends or **Table** to inspect aggregated values. The name of the selected saved view can still say "Accumulated costs" after you change its granularity.
+8. Add the filters below, then choose a grouping. Wait for the chart to refresh after each change and recheck the scope, dates, metric, currency, and active filter pills before interpreting the result.
+
+> [!NOTE]
+> Daily is the lowest cost granularity in this portal view; it does not show hours, minutes, or exact VM start/stop times. Daily charts support up to 92 consecutive days; selecting a longer period can switch the view to Monthly and adjust the dates. Obtain compute quantities from the detailed usage records later in this guide.
+
+### Apply and Remove Filters
+
+1. Select **Add filter** above the chart.
+2. In the attribute list, search for or choose **Service name** (called **Meter category** in some contexts).
+3. Open the value list and select **Virtual Machines**. Confirm with **Apply** or the checkmark if the portal shows one.
+4. Select **Add filter** again, choose **Resource**, search for the VM, and select it. If names repeat, first filter **Resource group**, and verify the full resource identity against the VM's **Properties > Resource ID** privately.
+5. For a compute-usage investigation, optionally add **Charge type > Usage**, where available. Remove this filter when investigating purchases or refunds; otherwise those charges are intentionally excluded.
+6. To change a filter, select its pill and edit its values. To remove it, use the pill's remove control. Before trying a different recipe below, remove filters that no longer belong to that recipe.
+
+Multiple selected values within one include filter broaden that attribute's selection; filters on different attributes narrow the result together. For example, **Service name = Virtual Machines** plus **Resource group = rg-demo** shows the VM-service costs in that group, not all services in that group. Available values also depend on earlier filters, dates, scope, and currency. An empty value list is not proof that the resource never incurred cost.
+
+| Filter | Example selection | What to check |
+| --- | --- | --- |
+| Service name / Meter category | Virtual Machines | Focuses on the VM service; it does not include every disk, network, backup, or licensing charge for a workload. |
+| Resource | The selected VM | Match the resource identity, not only its display name. Deleted resources can still have historical costs. |
+| Resource group | The workload's group | Includes only charges attributed to that group, not dependencies elsewhere. |
+| Resource type | The VM resource type, when listed | Useful for identifying VM resources; do not assume it selects the same meter set as Service name. |
+| Meter / Meter subcategory | A meter from the selected VM's charges | Helps investigate size, tier, or software-related charges. Confirm the underlying compute meter and hour unit in cost details. |
+| Pricing model | OnDemand, Spot, Reservation, or SavingsPlan, when offered | Keep the metric consistent; zero actual usage cost can still have billed usage quantity. |
+| Location | A region present in the usage data | A resource-location grouping is not a guarantee of where every dependent service is billed. |
+| Tag | An existing workload or environment tag and value | Untagged or unsupported charges can be excluded. Tags are not retroactive and resource-group tags are not automatically resource tags. |
+
+Use **Group by** to split the selected costs into categories; it does not itself exclude categories. For example, filter to one VM and group by **Meter**, or filter to a resource group and group by **Resource**. The classic chart supports one grouping at a time; use filters for the other dimensions.
 
 ![Redacted Azure portal reference showing Cost analysis, Download, and Daily granularity](./media/azure-cost-analysis-daily-redacted.png)
 
@@ -54,6 +90,87 @@ Use **Cost analysis** to see how VM costs change by day. For the **billed comput
 ![Public Microsoft Learn example of Cost analysis filtered to Virtual Machines](https://learn.microsoft.com/en-us/azure/virtual-machines/media/plan-to-manage-costs/virtual-machines-pricing-costs-service-filter.png)
 
 *Public example from [Monitor costs for virtual machines](https://learn.microsoft.com/en-us/azure/virtual-machines/cost-optimization-monitor-costs#monitor-costs); it does not show your subscription. The portal layout and available filters may vary.*
+
+### Nine Useful Portal Views
+
+These are recipes for configuring views, not nine guaranteed built-in view names. Start from the configurable analysis above, reset filters between recipes, and select only values offered by your scope. Keep **Actual cost** unless the recipe explicitly changes it.
+
+#### 1. One VM: cost per day
+
+1. Set a completed month or shorter custom period.
+2. Filter **Service name = Virtual Machines**, **Resource = your VM**, and optionally **Charge type = Usage**.
+3. Set **Granularity = Daily**, **Group by = None**, and **Column (stacked)** or **Line**.
+4. Hover over each day to inspect its date and cost. Switch the chart-type selector to **Table** to inspect the aggregated values. This answers "which days had higher VM-service cost?", not "how many hours did the VM run?"
+
+#### 2. All VMs: daily comparison
+
+1. Remove the single-VM filter; keep **Service name = Virtual Machines**. Optionally select one **Resource group**.
+2. Set **Group by = Resource**, **Granularity = Daily**, and **Column (stacked)**.
+3. Compare which resource contributes to a spike. Filter to that resource, then use recipe 3.
+4. If the chart combines resources into **Others**, use **Table** with **Granularity = None** to inspect all period totals, or narrow the resource filters. Do not treat Others as one VM.
+
+#### 3. One VM: meter breakdown
+
+1. Restore the **Resource** filter for the VM. Start with **Service name = Virtual Machines** to inspect that service's meters.
+2. Set **Group by = Meter**, **Granularity = Daily**, and **Column (stacked)**.
+3. Switch to **Table** and **Granularity = None** for the period's cost by meter. If needed, use **Meter subcategory / Service tier** as an alternative grouping, or filter to a particular meter.
+4. Remove the service filter to inspect other charges attributed to the same VM resource ID, but remember that separate disk and network resources still require their own analysis. A meter's cost is not its compute quantity; verify **Quantity** and **UnitOfMeasure** in the detailed file.
+
+#### 4. Most expensive VMs in a period
+
+1. Keep **Service name = Virtual Machines** and remove the single-resource filter.
+2. Select **Cost by resource**, where available, or configure **Group by = Resource**.
+3. Choose **Table**, set **Granularity = None**, and sort the cost column from highest to lowest.
+4. Use the ranking to choose a VM for recipe 1. The table shows period totals, not a daily total or a complete VM workload cost.
+
+#### 5. Monthly trend versus accumulated spend
+
+1. Select several completed months and filter to the VM service or a specific VM.
+2. Set **Granularity = Monthly**, **Group by = Resource** or **None**, and **Column (stacked)** to compare calendar-month costs.
+3. For a running-spend view, switch to **Accumulated** and **Area**. Do not compare an accumulated point with a single day's cost.
+4. Return to a period of 92 days or fewer before switching back to **Daily**. Forecast values, when shown, are estimates rather than billed charges; grouping does not provide an independent forecast for every resource.
+
+#### 6. Workload cost: compute plus supporting services
+
+1. Remove both the VM-only **Resource** filter and **Service name = Virtual Machines**.
+2. Filter **Resource group = the workload group**, or use an existing workload **Tag** covering the intended resources.
+3. Set **Group by = Service name**, **Granularity = Daily**, and **Column (stacked)**. This can reveal storage, networking, backup, or other service costs alongside compute.
+4. Switch to **Table**, **Granularity = None**, and **Group by = Resource** to inspect period totals for individual resources.
+5. Check dependencies in other groups and untagged resources separately. Do not assume the **Resources** smart view automatically associates every disk or network resource with a VM.
+
+#### 7. On-demand, Spot, and commitment allocation
+
+1. Restore the VM-service filter and optionally select one VM.
+2. Set **Group by = Pricing model**, **Granularity = Daily**, and **Column (stacked)**. Alternatively, filter **Pricing model = Spot** to isolate Spot charges.
+3. Record the **Actual cost** result, then switch the metric to **Amortized cost**, where supported, keeping the other settings unchanged.
+4. Interpret the results separately: actual costs reflect purchase/usage charging, while amortized costs allocate eligible commitments to benefiting resources. A covered VM can have zero actual compute usage cost without having zero compute usage.
+5. To investigate unused commitments, remove the VM-resource and usage-only filters, use an appropriate scope containing those costs, and group amortized costs by **Charge type**. A VM-only filter can hide unused commitment costs that are not assigned to a VM.
+
+#### 8. Compare resource groups or regions
+
+1. Remove the single-resource and single-group filters; retain **Service name = Virtual Machines** for a VM-only comparison.
+2. Set **Group by = Resource group / Resource group name**, **Granularity = Monthly** or **Daily**, and choose **Column (stacked)**.
+3. Change **Group by** to **Location** for a regional comparison. To compare regions inside one group, filter to that group first.
+4. Switch to **Table** with **Granularity = None** to rank the full period. Review unassigned entries rather than discarding them automatically.
+
+#### 9. Environment or cost-center view using tags
+
+1. Start at the intended subscription scope and decide whether the question is VM-service cost or whole-workload cost. Keep or remove the VM-service filter accordingly.
+2. Open **Group by** and select an existing tag key such as `Environment` or `CostCenter`.
+3. Use **Daily** with **Column (stacked)** for trends, or **Table** with **None** for period totals by tag value.
+4. To investigate one value, add a filter for that tag/value, then group by **Resource** or **Service name**.
+5. Review **Untagged**, unavailable, and unsupported tag categories. Applying a tag today does not relabel all historical usage, and filtering to one tag value can exclude costs that belong to the workload.
+
+### Save, Reopen, and Download a View
+
+1. Before saving, verify scope, dates, cost metric, currency, filters, grouping, chart type, and granularity. These settings define what the numbers mean.
+2. Select **Save as** to preserve a new configuration without overwriting an existing view. Use a descriptive name such as `VM daily - actual cost - compute service`. Choose a private view where offered; shared-view creation requires appropriate permissions and organizational approval.
+3. Reopen it from the view selector. Recheck dates and filter values, especially when comparing a saved custom period with a moving period such as the current month.
+4. Select **Download** in the toolbar and choose the offered data or image option. For a data download, inspect the headers and aggregation before using it. A downloaded daily cost table is still not an hour-by-hour usage report.
+5. For billed hours/minutes, continue to [Download Detailed Cost and Usage](#download-detailed-cost-and-usage). Do not divide daily cost by a retail hourly price to infer runtime: discounts, commitments, software, currency, and adjustments can invalidate that calculation.
+6. Share a view link only with authorized readers; a link does not grant cost-data access. Redact sensitive details before sharing an image or file outside the approved audience.
+
+See Microsoft's [customize Cost Analysis views](https://learn.microsoft.com/en-us/azure/cost-management-billing/costs/customize-cost-analysis-views) and [common Cost Analysis uses](https://learn.microsoft.com/en-us/azure/cost-management-billing/costs/cost-analysis-common-uses) for supported controls and current examples.
 
 ## Download Detailed Cost and Usage
 
@@ -189,6 +306,8 @@ The API supports ranges of at most one month and no older than 13 months, and do
 - [Understand Azure VM usage](https://learn.microsoft.com/en-us/azure/virtual-machines/vm-usage)
 - [Understand cost details fields](https://learn.microsoft.com/en-us/azure/cost-management-billing/automate/understand-usage-details-fields)
 - [Group and filter in Cost Analysis](https://learn.microsoft.com/en-us/azure/cost-management-billing/costs/group-filter)
+- [Customize Cost Analysis views](https://learn.microsoft.com/en-us/azure/cost-management-billing/costs/customize-cost-analysis-views)
+- [Common Cost Analysis uses](https://learn.microsoft.com/en-us/azure/cost-management-billing/costs/cost-analysis-common-uses)
 - [Create Cost Management exports](https://learn.microsoft.com/en-us/azure/cost-management-billing/costs/tutorial-improved-exports)
 - [Query API](https://learn.microsoft.com/en-us/rest/api/cost-management/query/usage?view=rest-cost-management-2025-03-01)
 - [Generate Cost Details Report API](https://learn.microsoft.com/en-us/rest/api/cost-management/generate-cost-details-report/create-operation?view=rest-cost-management-2025-03-01)
