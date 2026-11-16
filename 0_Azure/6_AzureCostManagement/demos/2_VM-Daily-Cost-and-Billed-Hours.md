@@ -19,6 +19,7 @@ Use **Cost analysis** to see how VM costs change by day. For the **billed comput
 <details>
 <summary><b>Table of Contents</b> (Click to expand)</summary>
 
+- [References](#references)
 - [Before You Start](#before-you-start)
 - [View Daily VM Cost in the Portal](#view-daily-vm-cost-in-the-portal)
   - [Open and Configure the Analysis](#open-and-configure-the-analysis)
@@ -32,7 +33,24 @@ Use **Cost analysis** to see how VM costs change by day. For the **billed comput
 - [REST API: Get Detailed Usage](#rest-api-get-detailed-usage)
 - [Understand the Result](#understand-the-result)
 - [Troubleshooting](#troubleshooting)
-- [References](#references)
+
+</details>
+
+<a id="references"></a>
+<details markdown="1">
+<summary><b>References</b> (Click to expand)</summary>
+
+- [Monitor costs for virtual machines](https://learn.microsoft.com/en-us/azure/virtual-machines/cost-optimization-monitor-costs)
+- [Understand Azure VM usage](https://learn.microsoft.com/en-us/azure/virtual-machines/vm-usage)
+- [Understand cost details fields](https://learn.microsoft.com/en-us/azure/cost-management-billing/automate/understand-usage-details-fields)
+- [Group and filter in Cost Analysis](https://learn.microsoft.com/en-us/azure/cost-management-billing/costs/group-filter)
+- [Customize Cost Analysis views](https://learn.microsoft.com/en-us/azure/cost-management-billing/costs/customize-cost-analysis-views)
+- [Common Cost Analysis uses](https://learn.microsoft.com/en-us/azure/cost-management-billing/costs/cost-analysis-common-uses)
+- [Create Cost Management exports](https://learn.microsoft.com/en-us/azure/cost-management-billing/costs/tutorial-improved-exports)
+- [Query API](https://learn.microsoft.com/en-us/rest/api/cost-management/query/usage?view=rest-cost-management-2025-03-01)
+- [Generate Cost Details Report API](https://learn.microsoft.com/en-us/rest/api/cost-management/generate-cost-details-report/create-operation?view=rest-cost-management-2025-03-01)
+
+**Image credits:** The eight local `learn-*.png` screenshots are unmodified public examples from Microsoft Learn's **Customize Cost Analysis views** and **Common Cost Analysis uses**, linked in their captions. Copyright Microsoft; reproduced under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) as provided by the [Azure documentation license](https://github.com/MicrosoftDocs/azure-docs/blob/main/LICENSE). They show Microsoft's example names, dates, and costs, not your subscription. The existing public images and redacted portal reference are identified separately in their captions. Portal layouts can change.
 
 </details>
 
@@ -59,6 +77,14 @@ Use **Cost analysis** to see how VM costs change by day. For the **billed comput
 > [!NOTE]
 > Daily is the lowest cost granularity in this portal view; it does not show hours, minutes, or exact VM start/stop times. Daily charts support up to 92 consecutive days; selecting a longer period can switch the view to Monthly and adjust the dates. Obtain compute quantities from the detailed usage records later in this guide.
 
+![Microsoft Learn example of the date selector with Last month and Custom date range](./media/learn-cost-date-selector.png)
+
+*Steps 4 and 8: choose a common analysis period. Public Microsoft Learn example from [Select a date range](https://learn.microsoft.com/en-us/azure/cost-management-billing/costs/customize-cost-analysis-views#select-a-date-range); the dates are illustrative.*
+
+![Microsoft Learn example of the Actual cost and Amortized cost metric selector](./media/learn-cost-metric-selector.png)
+
+*Step 5: select the cost basis before comparing results. Public Microsoft Learn example from [Switch between actual and amortized cost](https://learn.microsoft.com/en-us/azure/cost-management-billing/costs/customize-cost-analysis-views#switch-between-actual-and-amortized-cost); the amount is not from your subscription.*
+
 ### Apply and Remove Filters
 
 1. Select **Add filter** above the chart.
@@ -82,6 +108,10 @@ Multiple selected values within one include filter broaden that attribute's sele
 | Tag | An existing workload or environment tag and value | Untagged or unsupported charges can be excluded. Tags are not retroactive and resource-group tags are not automatically resource tags. |
 
 Use **Group by** to split the selected costs into categories; it does not itself exclude categories. For example, filter to one VM and group by **Meter**, or filter to a resource group and group by **Resource**. The classic chart supports one grouping at a time; use filters for the other dimensions.
+
+![Microsoft Learn example of Group by with Resource, Location, Meter, and Meter subcategory choices](./media/learn-cost-group-by.png)
+
+*Choose a grouping after applying filters. Public Microsoft Learn example from [View cost breakdown by selected dimensions](https://learn.microsoft.com/en-us/azure/cost-management-billing/costs/cost-analysis-common-uses#view-cost-breakdown-by-selected-dimensions). This illustrates the selector, not a VM-only result.*
 
 ![Redacted Azure portal reference showing Cost analysis, Download, and Daily granularity](./media/azure-cost-analysis-daily-redacted.png)
 
@@ -109,6 +139,10 @@ These are recipes for configuring views, not nine guaranteed built-in view names
 3. Compare which resource contributes to a spike. Filter to that resource, then use recipe 3.
 4. If the chart combines resources into **Others**, use **Table** with **Granularity = None** to inspect all period totals, or narrow the resource filters. Do not treat Others as one VM.
 
+![Microsoft Learn example with Service name set to virtual machines, Group by Resource, and Daily granularity](./media/learn-vm-daily-by-resource.png)
+
+*Recipe 2: the service filter, resource grouping, and Daily control work together. Public Microsoft Learn example from [Review invoiced charges in Cost Analysis](https://learn.microsoft.com/en-us/azure/cost-management-billing/costs/cost-analysis-common-uses#review-invoiced-charges-in-cost-analysis), shown as a Line chart. The tooltip shows daily costs, not runtime hours.*
+
 #### 3. One VM: meter breakdown
 
 1. Restore the **Resource** filter for the VM. Start with **Service name = Virtual Machines** to inspect that service's meters.
@@ -123,12 +157,20 @@ These are recipes for configuring views, not nine guaranteed built-in view names
 3. Choose **Table**, set **Granularity = None**, and sort the cost column from highest to lowest.
 4. Use the ranking to choose a VM for recipe 1. The table shows period totals, not a daily total or a complete VM workload cost.
 
+![Microsoft Learn example highlighting Cost by resource, Table, and Granularity None](./media/learn-cost-resource-table.png)
+
+*Recipe 4: locate the view and table controls, then apply the VM-service filter from the instructions. Public Microsoft Learn example from [View cost breakdown by Azure resource](https://learn.microsoft.com/en-us/azure/cost-management-billing/costs/cost-analysis-common-uses#view-cost-breakdown-by-azure-resource); this unfiltered sample includes other resource types.*
+
 #### 5. Monthly trend versus accumulated spend
 
 1. Select several completed months and filter to the VM service or a specific VM.
 2. Set **Granularity = Monthly**, **Group by = Resource** or **None**, and **Column (stacked)** to compare calendar-month costs.
 3. For a running-spend view, switch to **Accumulated** and **Area**. Do not compare an accumulated point with a single day's cost.
 4. Return to a period of 92 days or fewer before switching back to **Daily**. Forecast values, when shown, are estimates rather than billed charges; grouping does not provide an independent forecast for every resource.
+
+![Microsoft Learn example of Monthly granularity using a stacked-column chart](./media/learn-cost-monthly-trend.png)
+
+*Recipe 5: compare monthly totals rather than accumulated points. Public Microsoft Learn example from [Granularity examples](https://learn.microsoft.com/en-us/azure/cost-management-billing/costs/customize-cost-analysis-views#granularity-examples); these are illustrative monthly costs, not VM hours or your charges.*
 
 #### 6. Workload cost: compute plus supporting services
 
@@ -146,6 +188,10 @@ These are recipes for configuring views, not nine guaranteed built-in view names
 4. Interpret the results separately: actual costs reflect purchase/usage charging, while amortized costs allocate eligible commitments to benefiting resources. A covered VM can have zero actual compute usage cost without having zero compute usage.
 5. To investigate unused commitments, remove the VM-resource and usage-only filters, use an appropriate scope containing those costs, and group amortized costs by **Charge type**. A VM-only filter can hide unused commitment costs that are not assigned to a VM.
 
+![Microsoft Learn example of the Pricing Model filter with Spot selected and the confirmation checkmark visible](./media/learn-vm-spot-filter.png)
+
+*Recipe 7: choose a pricing-model value and confirm the filter. Public Microsoft Learn example from [View your Spot VM charges](https://learn.microsoft.com/en-us/azure/cost-management-billing/costs/cost-analysis-common-uses#view-your-spot-vm-charges). Available values depend on the scope and data.*
+
 #### 8. Compare resource groups or regions
 
 1. Remove the single-resource and single-group filters; retain **Service name = Virtual Machines** for a VM-only comparison.
@@ -160,6 +206,10 @@ These are recipes for configuring views, not nine guaranteed built-in view names
 3. Use **Daily** with **Column (stacked)** for trends, or **Table** with **None** for period totals by tag value.
 4. To investigate one value, add a filter for that tag/value, then group by **Resource** or **Service name**.
 5. Review **Untagged**, unavailable, and unsupported tag categories. Applying a tag today does not relabel all historical usage, and filtering to one tag value can exclude costs that belong to the workload.
+
+![Microsoft Learn example of selecting Tag in Group by and comparing environment values with Untagged](./media/learn-cost-tag-grouping.png)
+
+*Recipe 9: select the tag key, then review each value and Untagged. Public Microsoft Learn example from [View costs for a specific tag](https://learn.microsoft.com/en-us/azure/cost-management-billing/costs/cost-analysis-common-uses#view-costs-for-a-specific-tag); this example uses a table with Granularity None.*
 
 ### Save, Reopen, and Download a View
 
@@ -299,18 +349,6 @@ The API supports ranges of at most one month and no older than 13 months, and do
 - **VM or day missing:** Confirm the subscription, exact resource ID, date range, billing scope, and data latency. Check all partitions of the selected export run and check for filters excluding the relevant records.
 - **Quantity is not in hours:** Inspect the meter and `UnitOfMeasure`; don't convert disk capacity, transactions, software, or other units into VM compute time.
 - **Totals differ:** Check actual versus amortized cost, currency, rounding, purchases, credits, taxes, and charges on related resources. Don't add overlapping daily export snapshots.
-
-## References
-
-- [Monitor costs for virtual machines](https://learn.microsoft.com/en-us/azure/virtual-machines/cost-optimization-monitor-costs)
-- [Understand Azure VM usage](https://learn.microsoft.com/en-us/azure/virtual-machines/vm-usage)
-- [Understand cost details fields](https://learn.microsoft.com/en-us/azure/cost-management-billing/automate/understand-usage-details-fields)
-- [Group and filter in Cost Analysis](https://learn.microsoft.com/en-us/azure/cost-management-billing/costs/group-filter)
-- [Customize Cost Analysis views](https://learn.microsoft.com/en-us/azure/cost-management-billing/costs/customize-cost-analysis-views)
-- [Common Cost Analysis uses](https://learn.microsoft.com/en-us/azure/cost-management-billing/costs/cost-analysis-common-uses)
-- [Create Cost Management exports](https://learn.microsoft.com/en-us/azure/cost-management-billing/costs/tutorial-improved-exports)
-- [Query API](https://learn.microsoft.com/en-us/rest/api/cost-management/query/usage?view=rest-cost-management-2025-03-01)
-- [Generate Cost Details Report API](https://learn.microsoft.com/en-us/rest/api/cost-management/generate-cost-details-report/create-operation?view=rest-cost-management-2025-03-01)
 
 <!-- START BADGE -->
 <div align="center">
