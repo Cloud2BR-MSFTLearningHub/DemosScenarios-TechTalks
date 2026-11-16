@@ -112,7 +112,7 @@ Use **Group by** to split the selected costs into categories; it does not itself
 
 ![Microsoft Learn example of Group by with Resource, Location, Meter, and Meter subcategory choices](./media/learn-cost-group-by.png)
 
->  Choose a grouping after applying filters. Public Microsoft Learn example from [View cost breakdown by selected dimensions](https://learn.microsoft.com/en-us/azure/cost-management-billing/costs/cost-analysis-common-uses#view-cost-breakdown-by-selected-dimensions). This illustrates the selector, not a VM-only result.
+>  Choose a grouping after applying filters. Public Microsoft Learn example from [View cost breakdown by selected dimensions](https://learn.microsoft.com/en-us/azure/cost-management-billing/costs/cost-analysis-common-uses#view-cost-breakdown-by-selected-dimensions). This illustrates the selector.
 
 ![Azure portal reference showing Cost analysis, Download, filter controls, and Daily granularity](./media/azure-cost-analysis-daily-redacted.png)
 
