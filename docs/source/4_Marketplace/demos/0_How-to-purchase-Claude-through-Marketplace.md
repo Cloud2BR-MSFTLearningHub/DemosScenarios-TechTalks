@@ -42,9 +42,9 @@ This guide helps a customer discover and subscribe to the Claude Platform on Fou
 4. Choose an available Claude model and deploy it using the [deployment guidance](https://learn.microsoft.com/en-us/azure/foundry/foundry-models/how-to/use-foundry-models-claude).
 5. Monitor usage and cost. Eligible new deployments are metered and billed in CCU through Azure Marketplace.
 
-![Microsoft Learn overview of the Azure Marketplace and Microsoft Foundry subscription paths for Claude](../img/claude-marketplace-subscription.png)
+![Flow from Azure Marketplace or Microsoft Foundry through offer acceptance, model deployment, and CCU billing](../img/claude-marketplace-flow.svg)
 
-*Subscription paths shown in Microsoft Learn. See the [current subscription guidance](https://learn.microsoft.com/en-us/azure/foundry/foundry-models/concepts/claude-models-billing#subscribing-to-a-claude-offer-in-foundry) for updates.*
+*Overview of the subscription, deployment, and billing flow. See the [current subscription guidance](https://learn.microsoft.com/en-us/azure/foundry/foundry-models/concepts/claude-models-billing#subscribing-to-a-claude-offer-in-foundry) for updates.*
 
 ## Alternative: Subscribe through Microsoft Foundry
 
