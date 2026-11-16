@@ -14,7 +14,7 @@ Last updated: 2026-11-16
 Use **Cost analysis** to see how VM costs change by day. For the **billed compute quantity**, download or export the detailed usage records, select the VM compute meter measured in hours, and convert the decimal hours to hours and minutes. A Cost Management query can return daily costs, but it does not replace the detailed records needed for the quantity.
 
 > [!IMPORTANT]
-> Billing data, resource IDs, and exported files can be sensitive. This guide uses placeholders and public Microsoft Learn images; it does not include information from a customer subscription. Do not publish unredacted portal screenshots, account or subscription IDs, resource names, invoices, tokens, or downloaded reports.
+> Billing data, resource IDs, and exported files can be sensitive. This guide uses placeholders, public Microsoft Learn images, and a cropped, redacted portal reference. No subscription identifiers or billing values are published. Do not publish unredacted portal screenshots, account or subscription IDs, resource names, invoices, tokens, or downloaded reports.
 
 <details>
 <summary><b>Table of Contents</b> (Click to expand)</summary>
@@ -46,6 +46,10 @@ Use **Cost analysis** to see how VM costs change by day. For the **billed comput
 3. Use **Add filter** > **Service name** > **Virtual Machines**. To focus on one VM, add a **Resource** filter and choose that VM. Group by **Resource** to compare VMs or **Meter** to investigate which meters are contributing to cost.
 4. Inspect the daily chart and table, and save the view if your organization permits it. The daily view is a cost view; it is not an authoritative start/stop timeline or a replacement for billable usage quantity.
 5. To see the complete workload cost, review associated disk, network, backup, licensing, and other resource charges separately; a filter on the VM resource or Virtual Machines service does not automatically include all related resources.
+
+![Redacted Azure portal reference showing Cost analysis, Download, and Daily granularity](./media/azure-cost-analysis-daily-redacted.png)
+
+*Captured from a signed-in Azure portal session on November 16, 2026. Browser chrome, identity, subscription name, scope name, filter selection, billing amounts, budget, and charts have been cropped out or covered with opaque redactions. This reference shows the toolbar and **Granularity: Daily** control, not a VM-filtered result or a downloaded usage report. Changing the granularity does not rename the selected view. The **Download** toolbar action is not a substitute for obtaining the detailed usage records described below. No live REST API request was validated in this session.*
 
 ![Public Microsoft Learn example of Cost analysis filtered to Virtual Machines](https://learn.microsoft.com/en-us/azure/virtual-machines/media/plan-to-manage-costs/virtual-machines-pricing-costs-service-filter.png)
 
