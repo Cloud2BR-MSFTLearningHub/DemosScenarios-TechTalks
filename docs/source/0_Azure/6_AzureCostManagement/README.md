@@ -37,6 +37,12 @@ Last updated: 2026-01-29
 | **Reporting**    | - **Custom Reports**: Generate custom reports to share with stakeholders.<br/>- **Power BI Integration**: Use Power BI for advanced reporting and dashboard creation. |
 | **Automation**   | - **Data Export**: Automate the export of cost data to storage accounts for further analysis.<br/>- **Integration**: Integrate cost data with external tools and processes. |
 
+## Demos
+
+- [Azure billing report](./demos/0_BillingReport.md)
+- [Budgets and alerts](./demos/1_Budget_Alerts.md)
+- [Daily VM cost and billed hours](./demos/2_VM-Daily-Cost-and-Billed-Hours.md)
+
 <!-- START BADGE -->
 <div align="center">
   <img src="https://img.shields.io/badge/Total%20views-1465-limegreen" alt="Total views">
