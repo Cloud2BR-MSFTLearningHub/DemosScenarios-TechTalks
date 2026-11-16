@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="510" viewBox="0 0 1200 510" role="img" aria-labelledby="title description">
+  <title id="title">Claude in Microsoft Foundry: subscription, deployment, and billing flow</title>
+  <desc id="description">Start in Azure Marketplace or Microsoft Foundry, accept the Claude platform offer, deploy an available model in Foundry, and monitor token usage and CCU charges. Private-offer discounts, when applicable, are applied before token usage is converted to CCUs.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="strokeWidth">
+      <path d="M1 1 L9 5 L1 9 Z" fill="#46627f"/>
+    </marker>
+    <style>
+      .title { font: 700 28px 'Segoe UI', Arial, sans-serif; fill: #102a43; }
+      .subtitle { font: 15px 'Segoe UI', Arial, sans-serif; fill: #486581; }
+      .label { font: 700 18px 'Segoe UI', Arial, sans-serif; fill: #102a43; }
+      .body { font: 15px 'Segoe UI', Arial, sans-serif; fill: #334e68; }
+      .small { font: 14px 'Segoe UI', Arial, sans-serif; fill: #486581; }
+      .number { font: 700 16px 'Segoe UI', Arial, sans-serif; fill: white; }
+      .line { stroke: #46627f; stroke-width: 3; fill: none; marker-end: url(#arrow); }
+    </style>
+  </defs>
+
+  <rect x="1" y="1" width="1198" height="508" rx="20" fill="#f5f9fd" stroke="#d9e7f2" stroke-width="2"/>
+  <text x="42" y="55" class="title">From offer to Claude usage</text>
+  <text x="42" y="82" class="subtitle">Two entry points lead to the same Microsoft Foundry deployment and CCU billing model.</text>
+
+  <rect x="40" y="118" width="218" height="116" rx="14" fill="#e5f2ff" stroke="#0078d4" stroke-width="2"/>
+  <circle cx="65" cy="143" r="15" fill="#0078d4"/>
+  <text x="65" y="149" class="number" text-anchor="middle">1</text>
+  <text x="88" y="148" class="label">Marketplace</text>
+  <text x="60" y="179" class="body">Discover Claude and</text>
+  <text x="60" y="201" class="body">select the platform offer.</text>
+
+  <rect x="307" y="118" width="218" height="116" rx="14" fill="#ffffff" stroke="#9fb3c8" stroke-width="2"/>
+  <circle cx="332" cy="143" r="15" fill="#0078d4"/>
+  <text x="332" y="149" class="number" text-anchor="middle">2</text>
+  <text x="355" y="148" class="label">Accept offer</text>
+  <text x="327" y="179" class="body">Review terms, pricing</text>
+  <text x="327" y="201" class="body">and billing account.</text>
+
+  <rect x="574" y="118" width="218" height="116" rx="14" fill="#ffffff" stroke="#9fb3c8" stroke-width="2"/>
+  <circle cx="599" cy="143" r="15" fill="#0078d4"/>
+  <text x="599" y="149" class="number" text-anchor="middle">3</text>
+  <text x="622" y="148" class="label">Foundry catalog</text>
+  <text x="594" y="179" class="body">Choose an available</text>
+  <text x="594" y="201" class="body">Claude model.</text>
+
+  <rect x="841" y="118" width="318" height="116" rx="14" fill="#e5f7f1" stroke="#16845b" stroke-width="2"/>
+  <circle cx="866" cy="143" r="15" fill="#16845b"/>
+  <text x="866" y="149" class="number" text-anchor="middle">4</text>
+  <text x="889" y="148" class="label">Deploy and use</text>
+  <text x="861" y="179" class="body">Deploy the model in Foundry</text>
+  <text x="861" y="201" class="body">and send requests.</text>
+
+  <path class="line" d="M258 176 H299"/>
+  <path class="line" d="M525 176 H566"/>
+  <path class="line" d="M792 176 H833"/>
+
+  <rect x="40" y="266" width="485" height="76" rx="12" fill="#ffffff" stroke="#b8cbdc" stroke-width="2"/>
+  <text x="59" y="294" class="label">Alternative: start in Foundry</text>
+  <text x="59" y="318" class="body">Select a Claude model in the catalog, then accept the offer.</text>
+  <path class="line" d="M525 304 H548 V250 H683 V242"/>
+
+  <path class="line" d="M1000 234 V268"/>
+  <rect x="574" y="276" width="585" height="66" rx="12" fill="#fff7e6" stroke="#d6a53a" stroke-width="2"/>
+  <text x="594" y="303" class="label">Usage becomes CCU</text>
+  <text x="594" y="326" class="body">Token rates → applicable discount → CCU metering.</text>
+
+  <rect x="40" y="376" width="1119" height="92" rx="12" fill="#e9f0f7"/>
+  <text x="60" y="405" class="label">Monitor and reconcile cost</text>
+  <text x="60" y="430" class="body">Foundry Monitor: token usage and estimates  |  Azure Cost Management and invoice: actual billed charges</text>
+  <text x="60" y="452" class="small">Confirm current availability, terms, permissions, and any private offer before accepting or deploying.</text>
+</svg>
