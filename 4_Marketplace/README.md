@@ -16,7 +16,15 @@ Last updated: 2026-11-16
 
 - [Demos](#demos)
 - [Conversation Topics](#conversation-topics)
-- [References](#references)
+
+</details>
+
+<details>
+<summary><b>List of References</b> (Click to expand)</summary>
+
+- [Azure Marketplace](https://marketplace.microsoft.com/)
+- [Claude models in Microsoft Foundry](https://learn.microsoft.com/en-us/azure/foundry/foundry-models/concepts/claude-models)
+- [Claude consumption units billing in Microsoft Foundry](https://learn.microsoft.com/en-us/azure/foundry/foundry-models/concepts/claude-models-billing)
 
 </details>
 
@@ -30,12 +38,6 @@ Last updated: 2026-11-16
 - Confirm the Azure billing account, subscription permissions, offer terms, and any purchasing policies.
 - Discuss consumption-based billing, cost visibility, applicable commitments, and private offers.
 - Validate deployment, data handling, support, and governance requirements before production use.
-
-## References
-
-- [Azure Marketplace](https://marketplace.microsoft.com/)
-- [Claude models in Microsoft Foundry](https://learn.microsoft.com/en-us/azure/foundry/foundry-models/concepts/claude-models)
-- [Claude consumption units billing in Microsoft Foundry](https://learn.microsoft.com/en-us/azure/foundry/foundry-models/concepts/claude-models-billing)
 
 > [!IMPORTANT]
 > These notes are a learning guide. Confirm current offer terms, eligibility, pricing, availability, and deployment requirements in the official documentation and with your account team.
