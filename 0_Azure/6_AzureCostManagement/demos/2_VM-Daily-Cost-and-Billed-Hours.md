@@ -116,7 +116,7 @@ Use **Group by** to split the selected costs into categories; it does not itself
 
 ![Azure portal reference showing Cost analysis, Download, filter controls, and Daily granularity](./media/azure-cost-analysis-daily-redacted.png)
 
-> This is not a VM-filtered result or a downloaded usage report. Changing the granularity does not rename the selected view. The **Download** toolbar action is not a substitute for obtaining the detailed usage records described below. No live REST API request was validated in this session.
+> This is not a VM-filtered result or a downloaded usage report. Changing the granularity does not rename the selected view. The **Download** toolbar action is not a substitute for obtaining the detailed usage records described below.
 
 ![Public Microsoft Learn example of Cost analysis filtered to Virtual Machines](https://learn.microsoft.com/en-us/azure/virtual-machines/media/plan-to-manage-costs/virtual-machines-pricing-costs-service-filter.png)
 
