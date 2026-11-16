@@ -135,7 +135,7 @@ These examples show how to configure views, not nine guaranteed built-in view na
 
 ![Microsoft Learn example highlighting Daily granularity in a stacked-column chart](./media/learn-cost-daily-granularity.png)
 
->  Daily columns show separate dates. Public Microsoft Learn example from [View costs per day or by month](https://learn.microsoft.com/en-us/azure/cost-management-billing/costs/cost-analysis-common-uses#view-costs-per-day-or-by-month). Apply the single-VM filters above; this generic example is not VM-filtered, and forecast columns are estimates.
+>  Daily columns show separate dates. Public Microsoft Learn example from [View costs per day or by month](https://learn.microsoft.com/en-us/azure/cost-management-billing/costs/cost-analysis-common-uses#view-costs-per-day-or-by-month). Apply the single-VM filters above.
 
 #### 2. All VMs: daily comparison
 
@@ -179,7 +179,7 @@ These examples show how to configure views, not nine guaranteed built-in view na
 
 ![Microsoft Learn example of Monthly granularity using a stacked-column chart](./media/learn-cost-monthly-trend.png)
 
->  Compare monthly totals rather than accumulated points. Public Microsoft Learn example from [Granularity examples](https://learn.microsoft.com/en-us/azure/cost-management-billing/costs/customize-cost-analysis-views#granularity-examples); these are illustrative monthly costs, not VM hours or your charges.
+>  Compare monthly totals rather than accumulated points. Public Microsoft Learn example from [Granularity examples](https://learn.microsoft.com/en-us/azure/cost-management-billing/costs/customize-cost-analysis-views#granularity-examples); these are illustrative monthly costs.
 
 ![Microsoft Learn example showing the same monthly values as an accumulated running total](./media/learn-cost-accumulated-trend.png)
 
@@ -195,7 +195,7 @@ These examples show how to configure views, not nine guaranteed built-in view na
 
 ![Microsoft Learn example of a daily stacked-column chart grouped by Service name](./media/learn-cost-services-daily.png)
 
->  Grouping by **Service name** reveals the services contributing to daily spend. Public Microsoft Learn example from [Group costs](https://learn.microsoft.com/en-us/azure/cost-management-billing/costs/customize-cost-analysis-views#group-costs). Apply the workload's resource-group or tag filter; this example is not scoped to your workload, and forecast values are estimates.
+>  Grouping by **Service name** reveals the services contributing to daily spend. Public Microsoft Learn example from [Group costs](https://learn.microsoft.com/en-us/azure/cost-management-billing/costs/customize-cost-analysis-views#group-costs). Apply the workload's resource-group or tag filter; forecast values are estimates.
 
 #### 7. On-demand, Spot, and commitment allocation
 
@@ -270,7 +270,7 @@ See Microsoft's [customize Cost Analysis views](https://learn.microsoft.com/en-u
 
 ## Download Detailed Cost and Usage
 
-Choose the billing scope that includes the VM and use one of the following options. Availability and permissions depend on your agreement.
+> Choose the billing scope that includes the VM and use one of the following options. Availability and permissions depend on your agreement.
 
 ### Option A: Download a billing-period file
 
@@ -311,7 +311,7 @@ Choose the billing scope that includes the VM and use one of the following optio
 
 ![Public Microsoft Learn example of the Cost Management export dataset configuration](https://learn.microsoft.com/en-us/azure/cost-management-billing/costs/media/tutorial-improved-exports/add-export.png)
 
->  Public example from [Create and manage Cost Management exports](https://learn.microsoft.com/en-us/azure/cost-management-billing/costs/tutorial-improved-exports); it does not show your subscription.
+>  Public example from [Create and manage Cost Management exports](https://learn.microsoft.com/en-us/azure/cost-management-billing/costs/tutorial-improved-exports).
 
 ![Microsoft Learn example of export Destination settings for storage, container, directory, format, and compression](./media/learn-export-destination.png)
 
@@ -319,7 +319,7 @@ Choose the billing scope that includes the VM and use one of the following optio
 
 ![Microsoft Learn example of export run history with Run now, Export selected dates, and succeeded runs](./media/learn-export-run-history.png)
 
->  Inspect **Run history** and the execution status; use **Run now** or **Export selected dates** only when needed. Public Microsoft Learn example from [Manage exports](https://learn.microsoft.com/en-us/azure/cost-management-billing/costs/tutorial-improved-exports#manage-exports). This sample uses a FOCUS dataset to illustrate the controls, not this guide's actual-cost schema.
+>  Inspect **Run history** and the execution status; use **Run now** or **Export selected dates** only when needed. Public Microsoft Learn example from [Manage exports](https://learn.microsoft.com/en-us/azure/cost-management-billing/costs/tutorial-improved-exports#manage-exports). 
 
 ![Microsoft Learn example of the storage account page with Open in Explorer](./media/learn-export-storage-explorer.png)
 
@@ -339,7 +339,7 @@ Choose the billing scope that includes the VM and use one of the following optio
 
 ![Illustrative workflow from detailed usage records through VM and compute-meter filters to summed decimal hours and hours-minutes formatting](./media/vm-billed-hours-workflow.svg)
 
->  Follow the detailed-usage workflow before formatting the summed quantity as hours and minutes. This original diagram uses the illustrative values in the worked example below; it is not a portal screenshot or a VM start/stop timeline.
+>  Follow the detailed-usage workflow before formatting the summed quantity as hours and minutes.
 
 ## Worked Example
 
@@ -350,7 +350,7 @@ These are **illustrative values**, not data from a subscription. Assume both row
 | 2026-10-01 | 1.50 | 0.30 |
 | 2026-10-01 | 0.25 | 0.05 |
 
-The PivotTable shows **1.75 hours** and **USD 0.35**. The formula above displays the quantity as **1:45**. Keep the two original rows for reconciliation; this example does not establish when the VM started or stopped.
+The PivotTable shows **1.75 hours** and **USD 0.35**. The formula above displays the quantity as **1:45**. Keep the two original rows for reconciliation.
 
 ## REST API: Query Daily Costs
 
