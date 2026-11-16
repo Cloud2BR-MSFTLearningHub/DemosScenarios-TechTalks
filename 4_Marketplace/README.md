@@ -1,6 +1,6 @@
 # Microsoft Marketplace - Overview
 
-Costa Rica
+Atlanta, USA
 
 [![GitHub](https://badgen.net/badge/icon/github?icon=github&label)](https://github.com/)
 [![GitHub](https://img.shields.io/badge/--181717?logo=github&logoColor=ffffff)](https://github.com/) [Cloud2BR OSS - Learning Hub](https://github.com/Cloud2BR-MSFTLearningHub)
@@ -9,7 +9,7 @@ Last updated: 2026-11-16
 
 ----------
 
-Microsoft Marketplace brings together Microsoft and partner offers that customers can discover, purchase, and manage through their Microsoft commercial relationship. These notes support conversations about purchasing, billing, and deploying marketplace solutions.
+> Microsoft Marketplace brings together Microsoft and partner offers that customers can discover, purchase, and manage through their Microsoft commercial relationship. These notes support conversations about purchasing, billing, and deploying marketplace solutions.
 
 <details>
 <summary><b>Table of Contents</b> (Click to expand)</summary>
