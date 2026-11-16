@@ -9,9 +9,9 @@ Last updated: 2026-11-16
 
 ----------
 
-## Content
+<details>
+<summary><b>Table of Contents</b> (Click to expand)</summary>
 
-- [Overview](#overview)
 - [Before You Start](#before-you-start)
 - [Subscribe through Azure Marketplace](#subscribe-through-azure-marketplace)
 - [Alternative: Subscribe through Microsoft Foundry](#alternative-subscribe-through-microsoft-foundry)
@@ -20,9 +20,9 @@ Last updated: 2026-11-16
 - [Cost and Usage Visibility](#cost-and-usage-visibility)
 - [References](#references)
 
-## Overview
+</details>
 
-This guide helps a customer discover and subscribe to the Claude Platform on Foundry offer through Azure Marketplace, deploy an available Claude model in Microsoft Foundry, and understand the Claude Consumption Unit (CCU) billing model. Subscribing from the Microsoft Foundry portal is an alternative path to the same CCU billing model.
+> This guide helps a customer discover and subscribe to the Claude Platform on Foundry offer through Azure Marketplace, deploy an available Claude model in Microsoft Foundry, and understand the Claude Consumption Unit (CCU) billing model. Subscribing from the Microsoft Foundry portal is an alternative path to the same CCU billing model.
 
 > [!IMPORTANT]
 > This is a learning guide, not a purchase recommendation. Verify current availability, prices, terms, permissions, and your organization's approval requirements before accepting an offer or deploying a model. Deployment and usage can incur charges.
